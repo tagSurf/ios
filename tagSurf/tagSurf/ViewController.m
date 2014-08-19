@@ -18,7 +18,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSURL *url = [[NSURL alloc] initWithString:@"http://beta.tagsurf.co"];
+    NSURL *url = [[NSURL alloc] initWithString:@"http://beta.tagsurf.co/share/trending/0"];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     //self.webView.scalesPageToFit = YES;
     [self.webView loadRequest:request];
