@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <URXSearch/URXSearchResult.h>
 
-@interface ViewController : UIViewController
 
+@interface ViewController : UIViewController<UIWebViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 @end

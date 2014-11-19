@@ -7,21 +7,22 @@
 //
 
 #import "ViewController.h"
-
+#import <URXSearch/URXSearchResult.h>
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UIWebView *webView;
-
+    
 @end
 
 @implementation ViewController
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSURL *url = [[NSURL alloc] initWithString:@"http://beta.tagsurf.co/share/trending/0"];
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+    NSURL *url = [NSURL URLWithString:@"http://beta.tagsurf.co/share/trending/0"];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     //self.webView.scalesPageToFit = YES;
-    [self.webView loadRequest:request];
+    self.webView.delegate = self;
+    [self.webView loadRequest:urlRequest];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -31,4 +32,28 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - UIWebViewDelegate
+ -(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    if(navigationType == 0) {
+        NSString *requestedURL = request.URL.absoluteString;
+        if(!([requestedURL rangeOfString:@"tagsurf" options:NSCaseInsensitiveSearch].location == NSNotFound)) return YES;
+        else if(!([requestedURL rangeOfString:@"urx.io" options:NSCaseInsensitiveSearch].location == NSNotFound)) {
+            URXSearchResult *result = [URXSearchResult searchResultFromEntityData:@{@"potentialAction":@{@"target":@{@"urlTemplate":requestedURL}}}];
+            [result resolveAsynchronouslyWithWebFallbackAndFailureHandler:^(URXAPIError *resolutionError) {
+                // log error if resolution fails
+                NSLog(@"%@", resolutionError);
+            }];
+            return NO;
+        }
+        else {
+            UIApplication *application = [UIApplication sharedApplication];
+            [application openURL:request.URL];
+            return NO;
+        }
+    }
+    else return YES;
+}
 @end
+
+

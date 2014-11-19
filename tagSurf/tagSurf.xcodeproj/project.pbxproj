@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FDDD2EC1A1D1AE700EDBAB4 /* URXSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDDD2EB1A1D1AE700EDBAB4 /* URXSearch.framework */; };
 		89C4DC711953910900826183 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C4DC701953910900826183 /* Foundation.framework */; };
 		89C4DC731953910900826183 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C4DC721953910900826183 /* CoreGraphics.framework */; };
 		89C4DC751953910900826183 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C4DC741953910900826183 /* UIKit.framework */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1FDDD2EB1A1D1AE700EDBAB4 /* URXSearch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = URXSearch.framework; path = "../urx/urx-sdk-ios/URXSearch.framework"; sourceTree = "<group>"; };
 		89C4DC6D1953910900826183 /* tagSurf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tagSurf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89C4DC701953910900826183 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		89C4DC721953910900826183 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FDDD2EC1A1D1AE700EDBAB4 /* URXSearch.framework in Frameworks */,
 				89C4DC731953910900826183 /* CoreGraphics.framework in Frameworks */,
 				89C4DC751953910900826183 /* UIKit.framework in Frameworks */,
 				89C4DC711953910900826183 /* Foundation.framework in Frameworks */,
@@ -103,6 +106,7 @@
 		89C4DC6F1953910900826183 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1FDDD2EB1A1D1AE700EDBAB4 /* URXSearch.framework */,
 				89C4DC701953910900826183 /* Foundation.framework */,
 				89C4DC721953910900826183 /* CoreGraphics.framework */,
 				89C4DC741953910900826183 /* UIKit.framework */,
@@ -393,13 +397,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: tagSurf Corp. (J55UTV63H8)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: tagSurf Corp. (J55UTV63H8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/placey/Dev/tagsurf_native/ios/urx/urx-sdk-ios",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tagSurf/tagSurf-Prefix.pch";
 				INFOPLIST_FILE = "tagSurf/tagSurf-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "95892fef-e14a-46e6-b8b4-3e5c77778291";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -409,13 +418,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: tagSurf Corp. (J55UTV63H8)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: tagSurf Corp. (J55UTV63H8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/placey/Dev/tagsurf_native/ios/urx/urx-sdk-ios",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tagSurf/tagSurf-Prefix.pch";
 				INFOPLIST_FILE = "tagSurf/tagSurf-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "95892fef-e14a-46e6-b8b4-3e5c77778291";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

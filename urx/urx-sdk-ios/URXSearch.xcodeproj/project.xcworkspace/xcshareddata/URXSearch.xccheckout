@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D9ED346C-6F88-4C95-88DE-7BD94E77C812</string>
+	<key>IDESourceControlProjectName</key>
+	<string>URXSearch</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>4E81244DCF47D9B0A5EF8B83B072F85AAD45B586</key>
+		<string>ssh://github.com/URXtech/urx-sdk-ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>URXSearch.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>4E81244DCF47D9B0A5EF8B83B072F85AAD45B586</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/URXtech/urx-sdk-ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>4E81244DCF47D9B0A5EF8B83B072F85AAD45B586</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4E81244DCF47D9B0A5EF8B83B072F85AAD45B586</string>
+			<key>IDESourceControlWCCName</key>
+			<string>urx-sdk-ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>

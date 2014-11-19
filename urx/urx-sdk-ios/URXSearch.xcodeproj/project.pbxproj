@@ -1,0 +1,842 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		5478997D19D61F250090AC15 /* Compile Documentation */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 5478998019D61F250090AC15 /* Build configuration list for PBXAggregateTarget "Compile Documentation" */;
+			buildPhases = (
+				5478998119D61F330090AC15 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "Compile Documentation";
+			productName = "Compile Documentation";
+		};
+		ACB8E0A219C10E34008F9804 /* Framework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = ACB8E0A319C10E34008F9804 /* Build configuration list for PBXAggregateTarget "Framework" */;
+			buildPhases = (
+				ACB8E0A819C10E5E008F9804 /* Build For All Architectures */,
+			);
+			dependencies = (
+				ACB8E0A719C10E4D008F9804 /* PBXTargetDependency */,
+			);
+			name = Framework;
+			productName = Framework;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		78A40F1419EF2D3F00121171 /* URXLimit.h in Headers */ = {isa = PBXBuildFile; fileRef = 78A40F1219EF2D3F00121171 /* URXLimit.h */; };
+		78A40F1519EF2D3F00121171 /* URXLimit.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A40F1319EF2D3F00121171 /* URXLimit.m */; };
+		78A40F1819EF2E5100121171 /* URXOffset.h in Headers */ = {isa = PBXBuildFile; fileRef = 78A40F1619EF2E5100121171 /* URXOffset.h */; };
+		78A40F1919EF2E5100121171 /* URXOffset.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A40F1719EF2E5100121171 /* URXOffset.m */; };
+		78A40F1B19EF2EFC00121171 /* URXLimitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A40F1A19EF2EFC00121171 /* URXLimitTests.m */; };
+		78A40F1D19EF307100121171 /* URXOffsetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A40F1C19EF307100121171 /* URXOffsetTests.m */; };
+		78F85EDC19F036B3002459AC /* URXQueryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F85EDB19F036B3002459AC /* URXQueryTests.m */; };
+		AC24BA7A19E1F75B0090EFE8 /* URXAPIError.m in Sources */ = {isa = PBXBuildFile; fileRef = AC24BA7919E1F75B0090EFE8 /* URXAPIError.m */; };
+		AC24BA7D19E356EB0090EFE8 /* URXAPIKey.h in Headers */ = {isa = PBXBuildFile; fileRef = AC24BA7B19E356EB0090EFE8 /* URXAPIKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC24BA7E19E356EB0090EFE8 /* URXAPIKey.m in Sources */ = {isa = PBXBuildFile; fileRef = AC24BA7C19E356EB0090EFE8 /* URXAPIKey.m */; };
+		AC2F2AA319DB63E00070A268 /* URXSearchResultTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2F2AA219DB63E00070A268 /* URXSearchResultTests.m */; };
+		AC30A3B719E5D11A00D2FB0F /* URXSearchResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = AC30A3B519E5D11A00D2FB0F /* URXSearchResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC30A3B819E5D11A00D2FB0F /* URXSearchResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AC30A3B619E5D11A00D2FB0F /* URXSearchResponse.m */; };
+		ACC0381D19BFAE0D005DA33B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC0381C19BFAE0D005DA33B /* Foundation.framework */; };
+		ACC0382B19BFAE0D005DA33B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC0382A19BFAE0D005DA33B /* XCTest.framework */; };
+		ACC0382C19BFAE0D005DA33B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC0381C19BFAE0D005DA33B /* Foundation.framework */; };
+		ACC0382E19BFAE0D005DA33B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC0382D19BFAE0D005DA33B /* UIKit.framework */; };
+		ACC0383119BFAE0D005DA33B /* libURXSearch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC0381919BFAE0D005DA33B /* libURXSearch.a */; };
+		ACC0383719BFAE0D005DA33B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACC0383519BFAE0D005DA33B /* InfoPlist.strings */; };
+		ACC0384419BFAED5005DA33B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC0384319BFAED5005DA33B /* UIKit.framework */; };
+		ACC0384619BFAEDA005DA33B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC0384519BFAEDA005DA33B /* CoreLocation.framework */; };
+		ACC0386C19BFAFE2005DA33B /* URXQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = ACC0384819BFAFE2005DA33B /* URXQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACC0386D19BFAFE2005DA33B /* URXQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC0384919BFAFE2005DA33B /* URXQuery.m */; };
+		ACC0386E19BFAFE2005DA33B /* URXAnd.h in Headers */ = {isa = PBXBuildFile; fileRef = ACC0384A19BFAFE2005DA33B /* URXAnd.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACC0386F19BFAFE2005DA33B /* URXAnd.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC0384B19BFAFE2005DA33B /* URXAnd.m */; };
+		ACC0387019BFAFE2005DA33B /* URXOr.h in Headers */ = {isa = PBXBuildFile; fileRef = ACC0384C19BFAFE2005DA33B /* URXOr.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACC0387119BFAFE2005DA33B /* URXOr.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC0384D19BFAFE2005DA33B /* URXOr.m */; };
+		ACC0387419BFAFE2005DA33B /* URXTerm.h in Headers */ = {isa = PBXBuildFile; fileRef = ACC0385019BFAFE2005DA33B /* URXTerm.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACC0387519BFAFE2005DA33B /* URXTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC0385119BFAFE2005DA33B /* URXTerm.m */; };
+		ACC0387819BFAFE2005DA33B /* URXPhrase.h in Headers */ = {isa = PBXBuildFile; fileRef = ACC0385419BFAFE2005DA33B /* URXPhrase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACC0387919BFAFE2005DA33B /* URXPhrase.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC0385519BFAFE2005DA33B /* URXPhrase.m */; };
+		ACC0387C19BFAFE2005DA33B /* URXDomainFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = ACC0385819BFAFE2005DA33B /* URXDomainFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACC0387D19BFAFE2005DA33B /* URXDomainFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC0385919BFAFE2005DA33B /* URXDomainFilter.m */; };
+		ACC0388019BFAFE2005DA33B /* URXActionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = ACC0385C19BFAFE2005DA33B /* URXActionFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACC0388119BFAFE2005DA33B /* URXActionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC0385D19BFAFE2005DA33B /* URXActionFilter.m */; };
+		ACC0388219BFAFE2005DA33B /* URXNot.h in Headers */ = {isa = PBXBuildFile; fileRef = ACC0385E19BFAFE2005DA33B /* URXNot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACC0388319BFAFE2005DA33B /* URXNot.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC0385F19BFAFE2005DA33B /* URXNot.m */; };
+		ACC0388419BFAFE2005DA33B /* URXGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = ACC0386019BFAFE2005DA33B /* URXGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACC0388519BFAFE2005DA33B /* URXGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC0386119BFAFE2005DA33B /* URXGroup.m */; };
+		ACC0388A19BFAFE2005DA33B /* URXRawQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = ACC0386619BFAFE2005DA33B /* URXRawQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACC0388B19BFAFE2005DA33B /* URXRawQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC0386719BFAFE2005DA33B /* URXRawQuery.m */; };
+		ACC0388C19BFAFE2005DA33B /* URXFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = ACC0386819BFAFE2005DA33B /* URXFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACC0388D19BFAFE2005DA33B /* URXFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC0386919BFAFE2005DA33B /* URXFilter.m */; };
+		ACC0389619BFAFF4005DA33B /* URXAPIError.h in Headers */ = {isa = PBXBuildFile; fileRef = ACC0389419BFAFF4005DA33B /* URXAPIError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACC038A519BFB018005DA33B /* URXTermTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC0389919BFB018005DA33B /* URXTermTests.m */; };
+		ACC038A619BFB018005DA33B /* URXPhraseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC0389A19BFB018005DA33B /* URXPhraseTests.m */; };
+		ACC038A719BFB018005DA33B /* URXRawQueryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC0389B19BFB018005DA33B /* URXRawQueryTests.m */; };
+		ACC038A819BFB018005DA33B /* URXDomainFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC0389C19BFB018005DA33B /* URXDomainFilterTests.m */; };
+		ACC038AA19BFB018005DA33B /* URXNotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC0389E19BFB018005DA33B /* URXNotTests.m */; };
+		ACC038AB19BFB018005DA33B /* URXGroupTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC0389F19BFB018005DA33B /* URXGroupTests.m */; };
+		ACC038AD19BFB018005DA33B /* URXAndTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC038A119BFB018005DA33B /* URXAndTests.m */; };
+		ACC038AE19BFB018005DA33B /* URXOrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC038A219BFB018005DA33B /* URXOrTests.m */; };
+		ACC038AF19BFB018005DA33B /* URXActionFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC038A319BFB018005DA33B /* URXActionFilterTests.m */; };
+		ACC038B519BFB113005DA33B /* NSDictionary+JSONLD.h in Headers */ = {isa = PBXBuildFile; fileRef = ACC038B319BFB113005DA33B /* NSDictionary+JSONLD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACC038B619BFB113005DA33B /* NSDictionary+JSONLD.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC038B419BFB113005DA33B /* NSDictionary+JSONLD.m */; };
+		ACC038B819BFB20C005DA33B /* NSDictionary+JSONLDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC038B719BFB20C005DA33B /* NSDictionary+JSONLDTests.m */; };
+		ACC038FB19BFB3ED005DA33B /* URXIntegrationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC038FA19BFB3ED005DA33B /* URXIntegrationTests.m */; };
+		ACC038FE19BFB986005DA33B /* URXSearchResult.h in Headers */ = {isa = PBXBuildFile; fileRef = ACC038FC19BFB986005DA33B /* URXSearchResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACC038FF19BFB986005DA33B /* URXSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC038FD19BFB986005DA33B /* URXSearchResult.m */; };
+		ACC0390219BFBCFC005DA33B /* URXResolutionResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = ACC0390019BFBCFC005DA33B /* URXResolutionResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACC0390319BFBCFC005DA33B /* URXResolutionResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC0390119BFBCFC005DA33B /* URXResolutionResponse.m */; };
+		ACC0390619BFBF9D005DA33B /* URXAPIRequestHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = ACC0390419BFBF9D005DA33B /* URXAPIRequestHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACC0390719BFBF9D005DA33B /* URXAPIRequestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC0390519BFBF9D005DA33B /* URXAPIRequestHelper.m */; };
+		ACC0390A19BFCA81005DA33B /* URXDeeplinkResolutionHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = ACC0390819BFCA81005DA33B /* URXDeeplinkResolutionHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACC0390B19BFCA81005DA33B /* URXDeeplinkResolutionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC0390919BFCA81005DA33B /* URXDeeplinkResolutionHelper.m */; };
+		ACEDDC9C19E5C322007DA6C1 /* URXConcatenation.h in Headers */ = {isa = PBXBuildFile; fileRef = ACEDDC9A19E5C322007DA6C1 /* URXConcatenation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACEDDC9D19E5C322007DA6C1 /* URXConcatenation.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEDDC9B19E5C322007DA6C1 /* URXConcatenation.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ACB8E0A619C10E4D008F9804 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACC0381119BFAE0D005DA33B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACC0381819BFAE0D005DA33B;
+			remoteInfo = URXSearch;
+		};
+		ACC0382F19BFAE0D005DA33B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACC0381119BFAE0D005DA33B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACC0381819BFAE0D005DA33B;
+			remoteInfo = URXSearch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ACC0381719BFAE0D005DA33B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		78A40F1219EF2D3F00121171 /* URXLimit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URXLimit.h; sourceTree = "<group>"; };
+		78A40F1319EF2D3F00121171 /* URXLimit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXLimit.m; sourceTree = "<group>"; };
+		78A40F1619EF2E5100121171 /* URXOffset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URXOffset.h; sourceTree = "<group>"; };
+		78A40F1719EF2E5100121171 /* URXOffset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXOffset.m; sourceTree = "<group>"; };
+		78A40F1A19EF2EFC00121171 /* URXLimitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXLimitTests.m; sourceTree = "<group>"; };
+		78A40F1C19EF307100121171 /* URXOffsetTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXOffsetTests.m; sourceTree = "<group>"; };
+		78F85EDB19F036B3002459AC /* URXQueryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXQueryTests.m; sourceTree = "<group>"; };
+		AC24BA7919E1F75B0090EFE8 /* URXAPIError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXAPIError.m; sourceTree = "<group>"; };
+		AC24BA7B19E356EB0090EFE8 /* URXAPIKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URXAPIKey.h; sourceTree = "<group>"; };
+		AC24BA7C19E356EB0090EFE8 /* URXAPIKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXAPIKey.m; sourceTree = "<group>"; };
+		AC2F2AA219DB63E00070A268 /* URXSearchResultTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXSearchResultTests.m; sourceTree = "<group>"; };
+		AC30A3B519E5D11A00D2FB0F /* URXSearchResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URXSearchResponse.h; sourceTree = "<group>"; };
+		AC30A3B619E5D11A00D2FB0F /* URXSearchResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXSearchResponse.m; sourceTree = "<group>"; };
+		ACC0381919BFAE0D005DA33B /* libURXSearch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libURXSearch.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACC0381C19BFAE0D005DA33B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ACC0382019BFAE0D005DA33B /* URXSearch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "URXSearch-Prefix.pch"; sourceTree = "<group>"; };
+		ACC0382919BFAE0D005DA33B /* URXSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = URXSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACC0382A19BFAE0D005DA33B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		ACC0382D19BFAE0D005DA33B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		ACC0383419BFAE0D005DA33B /* URXSearchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "URXSearchTests-Info.plist"; sourceTree = "<group>"; };
+		ACC0383619BFAE0D005DA33B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ACC0384319BFAED5005DA33B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		ACC0384519BFAEDA005DA33B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		ACC0384819BFAFE2005DA33B /* URXQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URXQuery.h; sourceTree = "<group>"; };
+		ACC0384919BFAFE2005DA33B /* URXQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXQuery.m; sourceTree = "<group>"; };
+		ACC0384A19BFAFE2005DA33B /* URXAnd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URXAnd.h; sourceTree = "<group>"; };
+		ACC0384B19BFAFE2005DA33B /* URXAnd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXAnd.m; sourceTree = "<group>"; };
+		ACC0384C19BFAFE2005DA33B /* URXOr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URXOr.h; sourceTree = "<group>"; };
+		ACC0384D19BFAFE2005DA33B /* URXOr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXOr.m; sourceTree = "<group>"; };
+		ACC0385019BFAFE2005DA33B /* URXTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URXTerm.h; sourceTree = "<group>"; };
+		ACC0385119BFAFE2005DA33B /* URXTerm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXTerm.m; sourceTree = "<group>"; };
+		ACC0385419BFAFE2005DA33B /* URXPhrase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URXPhrase.h; sourceTree = "<group>"; };
+		ACC0385519BFAFE2005DA33B /* URXPhrase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXPhrase.m; sourceTree = "<group>"; };
+		ACC0385819BFAFE2005DA33B /* URXDomainFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URXDomainFilter.h; sourceTree = "<group>"; };
+		ACC0385919BFAFE2005DA33B /* URXDomainFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXDomainFilter.m; sourceTree = "<group>"; };
+		ACC0385C19BFAFE2005DA33B /* URXActionFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URXActionFilter.h; sourceTree = "<group>"; };
+		ACC0385D19BFAFE2005DA33B /* URXActionFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXActionFilter.m; sourceTree = "<group>"; };
+		ACC0385E19BFAFE2005DA33B /* URXNot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URXNot.h; sourceTree = "<group>"; };
+		ACC0385F19BFAFE2005DA33B /* URXNot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXNot.m; sourceTree = "<group>"; };
+		ACC0386019BFAFE2005DA33B /* URXGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URXGroup.h; sourceTree = "<group>"; };
+		ACC0386119BFAFE2005DA33B /* URXGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXGroup.m; sourceTree = "<group>"; };
+		ACC0386619BFAFE2005DA33B /* URXRawQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URXRawQuery.h; sourceTree = "<group>"; };
+		ACC0386719BFAFE2005DA33B /* URXRawQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXRawQuery.m; sourceTree = "<group>"; };
+		ACC0386819BFAFE2005DA33B /* URXFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URXFilter.h; sourceTree = "<group>"; };
+		ACC0386919BFAFE2005DA33B /* URXFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXFilter.m; sourceTree = "<group>"; };
+		ACC0389419BFAFF4005DA33B /* URXAPIError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URXAPIError.h; sourceTree = "<group>"; };
+		ACC0389919BFB018005DA33B /* URXTermTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXTermTests.m; sourceTree = "<group>"; };
+		ACC0389A19BFB018005DA33B /* URXPhraseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXPhraseTests.m; sourceTree = "<group>"; };
+		ACC0389B19BFB018005DA33B /* URXRawQueryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXRawQueryTests.m; sourceTree = "<group>"; };
+		ACC0389C19BFB018005DA33B /* URXDomainFilterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXDomainFilterTests.m; sourceTree = "<group>"; };
+		ACC0389E19BFB018005DA33B /* URXNotTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXNotTests.m; sourceTree = "<group>"; };
+		ACC0389F19BFB018005DA33B /* URXGroupTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXGroupTests.m; sourceTree = "<group>"; };
+		ACC038A119BFB018005DA33B /* URXAndTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXAndTests.m; sourceTree = "<group>"; };
+		ACC038A219BFB018005DA33B /* URXOrTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXOrTests.m; sourceTree = "<group>"; };
+		ACC038A319BFB018005DA33B /* URXActionFilterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXActionFilterTests.m; sourceTree = "<group>"; };
+		ACC038B319BFB113005DA33B /* NSDictionary+JSONLD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JSONLD.h"; sourceTree = "<group>"; };
+		ACC038B419BFB113005DA33B /* NSDictionary+JSONLD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JSONLD.m"; sourceTree = "<group>"; };
+		ACC038B719BFB20C005DA33B /* NSDictionary+JSONLDTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JSONLDTests.m"; sourceTree = "<group>"; };
+		ACC038FA19BFB3ED005DA33B /* URXIntegrationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXIntegrationTests.m; sourceTree = "<group>"; };
+		ACC038FC19BFB986005DA33B /* URXSearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URXSearchResult.h; sourceTree = "<group>"; };
+		ACC038FD19BFB986005DA33B /* URXSearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXSearchResult.m; sourceTree = "<group>"; };
+		ACC0390019BFBCFC005DA33B /* URXResolutionResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URXResolutionResponse.h; sourceTree = "<group>"; };
+		ACC0390119BFBCFC005DA33B /* URXResolutionResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXResolutionResponse.m; sourceTree = "<group>"; };
+		ACC0390419BFBF9D005DA33B /* URXAPIRequestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URXAPIRequestHelper.h; sourceTree = "<group>"; };
+		ACC0390519BFBF9D005DA33B /* URXAPIRequestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXAPIRequestHelper.m; sourceTree = "<group>"; };
+		ACC0390819BFCA81005DA33B /* URXDeeplinkResolutionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URXDeeplinkResolutionHelper.h; sourceTree = "<group>"; };
+		ACC0390919BFCA81005DA33B /* URXDeeplinkResolutionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXDeeplinkResolutionHelper.m; sourceTree = "<group>"; };
+		ACEDDC9A19E5C322007DA6C1 /* URXConcatenation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URXConcatenation.h; sourceTree = "<group>"; };
+		ACEDDC9B19E5C322007DA6C1 /* URXConcatenation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URXConcatenation.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ACC0381619BFAE0D005DA33B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACC0384619BFAEDA005DA33B /* CoreLocation.framework in Frameworks */,
+				ACC0384419BFAED5005DA33B /* UIKit.framework in Frameworks */,
+				ACC0381D19BFAE0D005DA33B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACC0382619BFAE0D005DA33B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACC0382B19BFAE0D005DA33B /* XCTest.framework in Frameworks */,
+				ACC0383119BFAE0D005DA33B /* libURXSearch.a in Frameworks */,
+				ACC0382E19BFAE0D005DA33B /* UIKit.framework in Frameworks */,
+				ACC0382C19BFAE0D005DA33B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ACC0381019BFAE0D005DA33B = {
+			isa = PBXGroup;
+			children = (
+				ACC0381E19BFAE0D005DA33B /* URXSearch */,
+				ACC0383219BFAE0D005DA33B /* URXSearchTests */,
+				ACC0381B19BFAE0D005DA33B /* Frameworks */,
+				ACC0381A19BFAE0D005DA33B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ACC0381A19BFAE0D005DA33B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ACC0381919BFAE0D005DA33B /* libURXSearch.a */,
+				ACC0382919BFAE0D005DA33B /* URXSearchTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ACC0381B19BFAE0D005DA33B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ACC0384519BFAEDA005DA33B /* CoreLocation.framework */,
+				ACC0384319BFAED5005DA33B /* UIKit.framework */,
+				ACC0381C19BFAE0D005DA33B /* Foundation.framework */,
+				ACC0382A19BFAE0D005DA33B /* XCTest.framework */,
+				ACC0382D19BFAE0D005DA33B /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ACC0381E19BFAE0D005DA33B /* URXSearch */ = {
+			isa = PBXGroup;
+			children = (
+				ACC0389419BFAFF4005DA33B /* URXAPIError.h */,
+				AC24BA7919E1F75B0090EFE8 /* URXAPIError.m */,
+				ACC0384719BFAFD5005DA33B /* Query */,
+				ACC0381F19BFAE0D005DA33B /* Supporting Files */,
+				ACC038B319BFB113005DA33B /* NSDictionary+JSONLD.h */,
+				ACC038B419BFB113005DA33B /* NSDictionary+JSONLD.m */,
+				ACC038FC19BFB986005DA33B /* URXSearchResult.h */,
+				ACC038FD19BFB986005DA33B /* URXSearchResult.m */,
+				ACC0390019BFBCFC005DA33B /* URXResolutionResponse.h */,
+				ACC0390119BFBCFC005DA33B /* URXResolutionResponse.m */,
+				ACC0390419BFBF9D005DA33B /* URXAPIRequestHelper.h */,
+				ACC0390519BFBF9D005DA33B /* URXAPIRequestHelper.m */,
+				ACC0390819BFCA81005DA33B /* URXDeeplinkResolutionHelper.h */,
+				ACC0390919BFCA81005DA33B /* URXDeeplinkResolutionHelper.m */,
+				AC24BA7B19E356EB0090EFE8 /* URXAPIKey.h */,
+				AC24BA7C19E356EB0090EFE8 /* URXAPIKey.m */,
+				AC30A3B519E5D11A00D2FB0F /* URXSearchResponse.h */,
+				AC30A3B619E5D11A00D2FB0F /* URXSearchResponse.m */,
+			);
+			path = URXSearch;
+			sourceTree = "<group>";
+		};
+		ACC0381F19BFAE0D005DA33B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ACC0382019BFAE0D005DA33B /* URXSearch-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ACC0383219BFAE0D005DA33B /* URXSearchTests */ = {
+			isa = PBXGroup;
+			children = (
+				ACC0389819BFB00B005DA33B /* Query Tests */,
+				ACC0383319BFAE0D005DA33B /* Supporting Files */,
+				ACC038B719BFB20C005DA33B /* NSDictionary+JSONLDTests.m */,
+				ACC038FA19BFB3ED005DA33B /* URXIntegrationTests.m */,
+				AC2F2AA219DB63E00070A268 /* URXSearchResultTests.m */,
+			);
+			path = URXSearchTests;
+			sourceTree = "<group>";
+		};
+		ACC0383319BFAE0D005DA33B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ACC0383419BFAE0D005DA33B /* URXSearchTests-Info.plist */,
+				ACC0383519BFAE0D005DA33B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ACC0384719BFAFD5005DA33B /* Query */ = {
+			isa = PBXGroup;
+			children = (
+				ACC0384819BFAFE2005DA33B /* URXQuery.h */,
+				ACC0384919BFAFE2005DA33B /* URXQuery.m */,
+				ACEDDC9A19E5C322007DA6C1 /* URXConcatenation.h */,
+				ACEDDC9B19E5C322007DA6C1 /* URXConcatenation.m */,
+				ACC0384A19BFAFE2005DA33B /* URXAnd.h */,
+				ACC0384B19BFAFE2005DA33B /* URXAnd.m */,
+				ACC0384C19BFAFE2005DA33B /* URXOr.h */,
+				ACC0384D19BFAFE2005DA33B /* URXOr.m */,
+				ACC0385019BFAFE2005DA33B /* URXTerm.h */,
+				ACC0385119BFAFE2005DA33B /* URXTerm.m */,
+				ACC0385419BFAFE2005DA33B /* URXPhrase.h */,
+				ACC0385519BFAFE2005DA33B /* URXPhrase.m */,
+				ACC0385819BFAFE2005DA33B /* URXDomainFilter.h */,
+				ACC0385919BFAFE2005DA33B /* URXDomainFilter.m */,
+				ACC0385C19BFAFE2005DA33B /* URXActionFilter.h */,
+				ACC0385D19BFAFE2005DA33B /* URXActionFilter.m */,
+				ACC0385E19BFAFE2005DA33B /* URXNot.h */,
+				ACC0385F19BFAFE2005DA33B /* URXNot.m */,
+				ACC0386019BFAFE2005DA33B /* URXGroup.h */,
+				ACC0386119BFAFE2005DA33B /* URXGroup.m */,
+				ACC0386619BFAFE2005DA33B /* URXRawQuery.h */,
+				ACC0386719BFAFE2005DA33B /* URXRawQuery.m */,
+				ACC0386819BFAFE2005DA33B /* URXFilter.h */,
+				ACC0386919BFAFE2005DA33B /* URXFilter.m */,
+				78A40F1219EF2D3F00121171 /* URXLimit.h */,
+				78A40F1319EF2D3F00121171 /* URXLimit.m */,
+				78A40F1619EF2E5100121171 /* URXOffset.h */,
+				78A40F1719EF2E5100121171 /* URXOffset.m */,
+			);
+			name = Query;
+			sourceTree = "<group>";
+		};
+		ACC0389819BFB00B005DA33B /* Query Tests */ = {
+			isa = PBXGroup;
+			children = (
+				ACC0389919BFB018005DA33B /* URXTermTests.m */,
+				ACC0389A19BFB018005DA33B /* URXPhraseTests.m */,
+				ACC0389B19BFB018005DA33B /* URXRawQueryTests.m */,
+				ACC0389C19BFB018005DA33B /* URXDomainFilterTests.m */,
+				ACC0389E19BFB018005DA33B /* URXNotTests.m */,
+				ACC0389F19BFB018005DA33B /* URXGroupTests.m */,
+				ACC038A119BFB018005DA33B /* URXAndTests.m */,
+				ACC038A219BFB018005DA33B /* URXOrTests.m */,
+				ACC038A319BFB018005DA33B /* URXActionFilterTests.m */,
+				78A40F1A19EF2EFC00121171 /* URXLimitTests.m */,
+				78A40F1C19EF307100121171 /* URXOffsetTests.m */,
+				78F85EDB19F036B3002459AC /* URXQueryTests.m */,
+			);
+			name = "Query Tests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		ACC0384219BFAEBE005DA33B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACC0390219BFBCFC005DA33B /* URXResolutionResponse.h in Headers */,
+				ACC0389619BFAFF4005DA33B /* URXAPIError.h in Headers */,
+				ACC0388419BFAFE2005DA33B /* URXGroup.h in Headers */,
+				ACC0387019BFAFE2005DA33B /* URXOr.h in Headers */,
+				ACC0388C19BFAFE2005DA33B /* URXFilter.h in Headers */,
+				ACC0390619BFBF9D005DA33B /* URXAPIRequestHelper.h in Headers */,
+				ACC0386E19BFAFE2005DA33B /* URXAnd.h in Headers */,
+				ACC0388019BFAFE2005DA33B /* URXActionFilter.h in Headers */,
+				ACC0388A19BFAFE2005DA33B /* URXRawQuery.h in Headers */,
+				78A40F1819EF2E5100121171 /* URXOffset.h in Headers */,
+				ACC0387419BFAFE2005DA33B /* URXTerm.h in Headers */,
+				ACC0387819BFAFE2005DA33B /* URXPhrase.h in Headers */,
+				78A40F1419EF2D3F00121171 /* URXLimit.h in Headers */,
+				ACC0386C19BFAFE2005DA33B /* URXQuery.h in Headers */,
+				ACC0388219BFAFE2005DA33B /* URXNot.h in Headers */,
+				AC30A3B719E5D11A00D2FB0F /* URXSearchResponse.h in Headers */,
+				AC24BA7D19E356EB0090EFE8 /* URXAPIKey.h in Headers */,
+				ACEDDC9C19E5C322007DA6C1 /* URXConcatenation.h in Headers */,
+				ACC0390A19BFCA81005DA33B /* URXDeeplinkResolutionHelper.h in Headers */,
+				ACC038FE19BFB986005DA33B /* URXSearchResult.h in Headers */,
+				ACC0387C19BFAFE2005DA33B /* URXDomainFilter.h in Headers */,
+				ACC038B519BFB113005DA33B /* NSDictionary+JSONLD.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		ACC0381819BFAE0D005DA33B /* URXSearch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACC0383C19BFAE0D005DA33B /* Build configuration list for PBXNativeTarget "URXSearch" */;
+			buildPhases = (
+				ACC0381519BFAE0D005DA33B /* Sources */,
+				ACC0381619BFAE0D005DA33B /* Frameworks */,
+				ACC0381719BFAE0D005DA33B /* CopyFiles */,
+				ACC0384219BFAEBE005DA33B /* Headers */,
+				ACB8E0A119C10A32008F9804 /* Build Framework */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = URXSearch;
+			productName = URXSearch;
+			productReference = ACC0381919BFAE0D005DA33B /* libURXSearch.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		ACC0382819BFAE0D005DA33B /* URXSearchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACC0383F19BFAE0D005DA33B /* Build configuration list for PBXNativeTarget "URXSearchTests" */;
+			buildPhases = (
+				ACC0382519BFAE0D005DA33B /* Sources */,
+				ACC0382619BFAE0D005DA33B /* Frameworks */,
+				ACC0382719BFAE0D005DA33B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ACC0383019BFAE0D005DA33B /* PBXTargetDependency */,
+			);
+			name = URXSearchTests;
+			productName = URXSearchTests;
+			productReference = ACC0382919BFAE0D005DA33B /* URXSearchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ACC0381119BFAE0D005DA33B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = URX;
+				TargetAttributes = {
+					5478997D19D61F250090AC15 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+				};
+			};
+			buildConfigurationList = ACC0381419BFAE0D005DA33B /* Build configuration list for PBXProject "URXSearch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ACC0381019BFAE0D005DA33B;
+			productRefGroup = ACC0381A19BFAE0D005DA33B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ACC0381819BFAE0D005DA33B /* URXSearch */,
+				ACC0382819BFAE0D005DA33B /* URXSearchTests */,
+				ACB8E0A219C10E34008F9804 /* Framework */,
+				5478997D19D61F250090AC15 /* Compile Documentation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ACC0382719BFAE0D005DA33B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACC0383719BFAE0D005DA33B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5478998119D61F330090AC15 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Set the name of the Framework you want to build docs\nFMKS=(URXSearch)\n\nfor FMK_NAME in ${FMKS[@]}\ndo\n\n/usr/local/bin/appledoc \\\n--project-name \"${FMK_NAME}\" \\\n--project-company \"URX\" \\\n--company-id \"com.urx\" \\\n--output \"Docs/${FMK_NAME}\" \\\n--finalize-docset \\\n--logformat xcode \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--merge-categories \\\n--exit-threshold 2 \\\n--docset-platform-family iphoneos \\\n--ignore \"*.m\" \\\n--ignore \"LoadableCategory.h\" \\\n--index-desc \"${PROJECT_DIR}/readme.markdown\" \\\n\"${PROJECT_DIR}/${FMK_NAME}\"\n\ndone";
+		};
+		ACB8E0A119C10A32008F9804 /* Build Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nexport FRAMEWORK_LOCN=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework\"\n\n# Create the path to the real Headers\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers\"\n\n# Create the required symlinks\n/bin/ln -sfh A \"${FRAMEWORK_LOCN}/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${FRAMEWORK_LOCN}/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \\\n\"${FRAMEWORK_LOCN}/${PRODUCT_NAME}\"\n\n# Copy the public headers into the framework\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \\\n\"${FRAMEWORK_LOCN}/Versions/A/Headers\"";
+		};
+		ACB8E0A819C10E5E008F9804 /* Build For All Architectures */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build For All Architectures";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\n# If we're already inside this script then die\nif [ -n \"$RW_MULTIPLATFORM_BUILD_IN_PROGRESS\" ]; then\nexit 0\nfi\nexport RW_MULTIPLATFORM_BUILD_IN_PROGRESS=1\n\nRW_FRAMEWORK_NAME=${PROJECT_NAME}\nRW_INPUT_STATIC_LIB=\"lib${PROJECT_NAME}.a\"\nRW_FRAMEWORK_LOCATION=\"${BUILT_PRODUCTS_DIR}/${RW_FRAMEWORK_NAME}.framework\"\n\nfunction build_static_library {\n    # Will rebuild the static library as specified\n    #     build_static_library sdk\n    xcrun xcodebuild -project \"${PROJECT_FILE_PATH}\" \\\n    -target \"${TARGET_NAME}\" \\\n    -configuration \"${CONFIGURATION}\" \\\n    -sdk \"${1}\" \\\n    ONLY_ACTIVE_ARCH=NO \\\n    BUILD_DIR=\"${BUILD_DIR}\" \\\n    OBJROOT=\"${OBJROOT}\" \\\n    BUILD_ROOT=\"${BUILD_ROOT}\" \\\n    SYMROOT=\"${SYMROOT}\" $ACTION\n}\n\nfunction make_fat_library {\n    # Will smash 2 static libs together\n    #     make_fat_library in1 in2 out\n    xcrun lipo -create \"${1}\" \"${2}\" -output \"${3}\"\n}\n\n# 1 - Extract the platform (iphoneos/iphonesimulator) from the SDK name\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]; then\nRW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\n# 2 - Extract the version from the SDK\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]; then\nRW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\n# 3 - Determine the other platform\nif [ \"$RW_SDK_PLATFORM\" == \"iphoneos\" ]; then\nRW_OTHER_PLATFORM=iphonesimulator\nelse\nRW_OTHER_PLATFORM=iphoneos\nfi\n\n# 4 - Find the build directory\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$RW_SDK_PLATFORM$ ]]; then\nRW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${RW_OTHER_PLATFORM}\"\nelse\necho \"Could not find other platform build directory.\"\nexit 1\nfi\n\n# Build the other platform.\nbuild_static_library \"${RW_OTHER_PLATFORM}${RW_SDK_VERSION}\"\n\n# If we're currently building for iphonesimulator, then need to rebuild\n#   to ensure that we get both i386 and x86_64\nif [ \"$RW_SDK_PLATFORM\" == \"iphonesimulator\" ]; then\nbuild_static_library \"${SDK_NAME}\"\nfi\n\n# Join the 2 static libs into 1 and push into the .framework\nmake_fat_library \"${BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\" \\\n\"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\" \\\n\"${RW_FRAMEWORK_LOCATION}/Versions/A/${RW_FRAMEWORK_NAME}\"\n\n# Ensure that the framework is present in both platform's build directories\ncp -a \"${RW_FRAMEWORK_LOCATION}/Versions/A/${RW_FRAMEWORK_NAME}\" \\\n\"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_FRAMEWORK_NAME}.framework/Versions/A/${RW_FRAMEWORK_NAME}\"\n\n# Copy the framework to the user's desktop\nditto \"${RW_FRAMEWORK_LOCATION}\" \"${PROJECT_FILE_PATH}/../${RW_FRAMEWORK_NAME}.framework\"";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ACC0381519BFAE0D005DA33B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC24BA7A19E1F75B0090EFE8 /* URXAPIError.m in Sources */,
+				ACC038FF19BFB986005DA33B /* URXSearchResult.m in Sources */,
+				78A40F1919EF2E5100121171 /* URXOffset.m in Sources */,
+				ACC0386F19BFAFE2005DA33B /* URXAnd.m in Sources */,
+				ACC0387D19BFAFE2005DA33B /* URXDomainFilter.m in Sources */,
+				ACEDDC9D19E5C322007DA6C1 /* URXConcatenation.m in Sources */,
+				ACC0388D19BFAFE2005DA33B /* URXFilter.m in Sources */,
+				AC30A3B819E5D11A00D2FB0F /* URXSearchResponse.m in Sources */,
+				ACC0390B19BFCA81005DA33B /* URXDeeplinkResolutionHelper.m in Sources */,
+				ACC0390319BFBCFC005DA33B /* URXResolutionResponse.m in Sources */,
+				ACC0388319BFAFE2005DA33B /* URXNot.m in Sources */,
+				ACC0386D19BFAFE2005DA33B /* URXQuery.m in Sources */,
+				ACC0387119BFAFE2005DA33B /* URXOr.m in Sources */,
+				78A40F1519EF2D3F00121171 /* URXLimit.m in Sources */,
+				AC24BA7E19E356EB0090EFE8 /* URXAPIKey.m in Sources */,
+				ACC0388519BFAFE2005DA33B /* URXGroup.m in Sources */,
+				ACC0388B19BFAFE2005DA33B /* URXRawQuery.m in Sources */,
+				ACC0390719BFBF9D005DA33B /* URXAPIRequestHelper.m in Sources */,
+				ACC0387519BFAFE2005DA33B /* URXTerm.m in Sources */,
+				ACC0387919BFAFE2005DA33B /* URXPhrase.m in Sources */,
+				ACC0388119BFAFE2005DA33B /* URXActionFilter.m in Sources */,
+				ACC038B619BFB113005DA33B /* NSDictionary+JSONLD.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACC0382519BFAE0D005DA33B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78A40F1B19EF2EFC00121171 /* URXLimitTests.m in Sources */,
+				78F85EDC19F036B3002459AC /* URXQueryTests.m in Sources */,
+				ACC038B819BFB20C005DA33B /* NSDictionary+JSONLDTests.m in Sources */,
+				ACC038A619BFB018005DA33B /* URXPhraseTests.m in Sources */,
+				ACC038AA19BFB018005DA33B /* URXNotTests.m in Sources */,
+				ACC038FB19BFB3ED005DA33B /* URXIntegrationTests.m in Sources */,
+				AC2F2AA319DB63E00070A268 /* URXSearchResultTests.m in Sources */,
+				ACC038AF19BFB018005DA33B /* URXActionFilterTests.m in Sources */,
+				ACC038A819BFB018005DA33B /* URXDomainFilterTests.m in Sources */,
+				ACC038AE19BFB018005DA33B /* URXOrTests.m in Sources */,
+				ACC038AD19BFB018005DA33B /* URXAndTests.m in Sources */,
+				78A40F1D19EF307100121171 /* URXOffsetTests.m in Sources */,
+				ACC038AB19BFB018005DA33B /* URXGroupTests.m in Sources */,
+				ACC038A719BFB018005DA33B /* URXRawQueryTests.m in Sources */,
+				ACC038A519BFB018005DA33B /* URXTermTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ACB8E0A719C10E4D008F9804 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACC0381819BFAE0D005DA33B /* URXSearch */;
+			targetProxy = ACB8E0A619C10E4D008F9804 /* PBXContainerItemProxy */;
+		};
+		ACC0383019BFAE0D005DA33B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACC0381819BFAE0D005DA33B /* URXSearch */;
+			targetProxy = ACC0382F19BFAE0D005DA33B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ACC0383519BFAE0D005DA33B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACC0383619BFAE0D005DA33B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5478997E19D61F250090AC15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5478997F19D61F250090AC15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		ACB8E0A419C10E34008F9804 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ACB8E0A519C10E34008F9804 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		ACC0383A19BFAE0D005DA33B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ACC0383B19BFAE0D005DA33B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ACC0383D19BFAE0D005DA33B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				DSTROOT = /tmp/URXSearch.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "URXSearch/URXSearch-Prefix.pch";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PROJECT_NAME)";
+				SKIP_INSTALL = NO;
+				STRIP_STYLE = "non-global";
+			};
+			name = Debug;
+		};
+		ACC0383E19BFAE0D005DA33B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				DSTROOT = /tmp/URXSearch.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "URXSearch/URXSearch-Prefix.pch";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PROJECT_NAME)";
+				SKIP_INSTALL = NO;
+				STRIP_STYLE = "non-global";
+			};
+			name = Release;
+		};
+		ACC0384019BFAE0D005DA33B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "URXSearch/URXSearch-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "URXSearchTests/URXSearchTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		ACC0384119BFAE0D005DA33B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "URXSearch/URXSearch-Prefix.pch";
+				INFOPLIST_FILE = "URXSearchTests/URXSearchTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5478998019D61F250090AC15 /* Build configuration list for PBXAggregateTarget "Compile Documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5478997E19D61F250090AC15 /* Debug */,
+				5478997F19D61F250090AC15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACB8E0A319C10E34008F9804 /* Build configuration list for PBXAggregateTarget "Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACB8E0A419C10E34008F9804 /* Debug */,
+				ACB8E0A519C10E34008F9804 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACC0381419BFAE0D005DA33B /* Build configuration list for PBXProject "URXSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACC0383A19BFAE0D005DA33B /* Debug */,
+				ACC0383B19BFAE0D005DA33B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACC0383C19BFAE0D005DA33B /* Build configuration list for PBXNativeTarget "URXSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACC0383D19BFAE0D005DA33B /* Debug */,
+				ACC0383E19BFAE0D005DA33B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACC0383F19BFAE0D005DA33B /* Build configuration list for PBXNativeTarget "URXSearchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACC0384019BFAE0D005DA33B /* Debug */,
+				ACC0384119BFAE0D005DA33B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ACC0381119BFAE0D005DA33B /* Project object */;
+}
