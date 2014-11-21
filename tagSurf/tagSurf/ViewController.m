@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <URXSearch/URXSearchResult.h>
+
 @interface ViewController ()
     
 @end
@@ -18,7 +19,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSURL *url = [NSURL URLWithString:@"http://beta.tagsurf.co/share/trending/0"];
+    NSURL *url = [NSURL URLWithString:@"http://staging.tagsurf.co/share/trending/0"];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     //self.webView.scalesPageToFit = YES;
     self.webView.delegate = self;
@@ -47,9 +48,21 @@
             return NO;
         }
         else {
-            UIApplication *application = [UIApplication sharedApplication];
-            [application openURL:request.URL];
-            return NO;
+            if (webView == self.visibleWebView) {
+                [self.hiddenWebView loadRequest:request];
+                [UIView animateWithDuration:duration animations:^{
+                    // put an animation here
+                } completion:^(BOOL finished) {
+                    UIWebView *oldVisibleWebView = self.visibleWebView;
+                    self.visibleWebView = self.hiddenWebView;
+                    self.hiddenWebView = oldVisibleWebView;
+                }];
+                return NO;
+            }
+            return YES;
+//            UIApplication *application = [UIApplication sharedApplication];
+//            [application openURL:request.URL];
+//            return NO;
         }
     }
     else return YES;
