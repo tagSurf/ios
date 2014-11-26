@@ -18,7 +18,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSURL *url = [NSURL URLWithString:@"http://beta.tagsurf.co/share/trending/0"];
+    NSURL *url = [NSURL URLWithString:@"http://staging.tagsurf.co/share/trending/0"];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     //self.webView.scalesPageToFit = YES;
     self.webView.delegate = self;
@@ -47,12 +47,26 @@
             return NO;
         }
         else {
-            UIApplication *application = [UIApplication sharedApplication];
-            [application openURL:request.URL];
+            [self.linkView loadRequest:request];
+            UIButton *closeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+            closeBtn.frame = CGRectMake((self.view.frame.size.width - 50)/2, (self.view.frame.size.height - 50), 50, 30);
+            [closeBtn setTitle:@"close" forState:UIControlStateNormal];
+            [closeBtn setBackgroundColor:[UIColor lightGrayColor]];
+            [closeBtn addTarget:self action:@selector(closeBtn:) forControlEvents:UIControlEventTouchUpInside];
+            [self.linkView addSubview:closeBtn];
+            [self.view bringSubviewToFront:self.linkView];
+//            UIApplication *application = [UIApplication sharedApplication];
+//            [application openURL:request.URL];
             return NO;
         }
     }
     else return YES;
+}
+
+- (IBAction)closeBtn:(id)sender {
+    [self.linkView stringByEvaluatingJavaScriptFromString:@"document.body.innerHTML = \"\";"];
+    [self.view bringSubviewToFront:self.webView];
+    
 }
 @end
 

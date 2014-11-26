@@ -14,7 +14,6 @@
 		89C4DC7B1953910900826183 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 89C4DC791953910900826183 /* InfoPlist.strings */; };
 		89C4DC7D1953910900826183 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C4DC7C1953910900826183 /* main.m */; };
 		89C4DC811953910900826183 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C4DC801953910900826183 /* AppDelegate.m */; };
-		89C4DC841953910900826183 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89C4DC821953910900826183 /* Main_iPhone.storyboard */; };
 		89C4DC871953910900826183 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89C4DC851953910900826183 /* Main_iPad.storyboard */; };
 		89C4DC8A1953910900826183 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C4DC891953910900826183 /* ViewController.m */; };
 		89C4DC8C1953910900826183 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89C4DC8B1953910900826183 /* Images.xcassets */; };
@@ -47,7 +46,6 @@
 		89C4DC7E1953910900826183 /* tagSurf-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tagSurf-Prefix.pch"; sourceTree = "<group>"; };
 		89C4DC7F1953910900826183 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		89C4DC801953910900826183 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		89C4DC831953910900826183 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		89C4DC861953910900826183 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		89C4DC881953910900826183 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		89C4DC891953910900826183 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -120,7 +118,6 @@
 			children = (
 				89C4DC7F1953910900826183 /* AppDelegate.h */,
 				89C4DC801953910900826183 /* AppDelegate.m */,
-				89C4DC821953910900826183 /* Main_iPhone.storyboard */,
 				89C4DC851953910900826183 /* Main_iPad.storyboard */,
 				89C4DC881953910900826183 /* ViewController.h */,
 				89C4DC891953910900826183 /* ViewController.m */,
@@ -240,7 +237,6 @@
 			files = (
 				89C4DC871953910900826183 /* Main_iPad.storyboard in Resources */,
 				89C4DC8C1953910900826183 /* Images.xcassets in Resources */,
-				89C4DC841953910900826183 /* Main_iPhone.storyboard in Resources */,
 				89C4DC7B1953910900826183 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,14 +287,6 @@
 				89C4DC7A1953910900826183 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		89C4DC821953910900826183 /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				89C4DC831953910900826183 /* Base */,
-			);
-			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 		89C4DC851953910900826183 /* Main_iPad.storyboard */ = {
