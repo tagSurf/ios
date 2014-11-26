@@ -47,6 +47,7 @@
             return NO;
         }
         else {
+            NSLog(@"Link click registered");
             [self.linkView loadRequest:request];
             UIButton *closeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
             closeBtn.frame = CGRectMake((self.view.frame.size.width - 50)/2, (self.view.frame.size.height - 50), 50, 30);

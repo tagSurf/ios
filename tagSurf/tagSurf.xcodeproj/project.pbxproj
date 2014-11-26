@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F641B631A266C8A000FD22F /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F641B611A266C8A000FD22F /* Main_iPhone.storyboard */; };
 		1FDDD2EC1A1D1AE700EDBAB4 /* URXSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDDD2EB1A1D1AE700EDBAB4 /* URXSearch.framework */; };
 		89C4DC711953910900826183 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C4DC701953910900826183 /* Foundation.framework */; };
 		89C4DC731953910900826183 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C4DC721953910900826183 /* CoreGraphics.framework */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F641B621A266C8A000FD22F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		1FDDD2EB1A1D1AE700EDBAB4 /* URXSearch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = URXSearch.framework; path = "../urx/urx-sdk-ios/URXSearch.framework"; sourceTree = "<group>"; };
 		89C4DC6D1953910900826183 /* tagSurf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tagSurf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89C4DC701953910900826183 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -119,6 +121,7 @@
 				89C4DC7F1953910900826183 /* AppDelegate.h */,
 				89C4DC801953910900826183 /* AppDelegate.m */,
 				89C4DC851953910900826183 /* Main_iPad.storyboard */,
+				1F641B611A266C8A000FD22F /* Main_iPhone.storyboard */,
 				89C4DC881953910900826183 /* ViewController.h */,
 				89C4DC891953910900826183 /* ViewController.m */,
 				89C4DC8B1953910900826183 /* Images.xcassets */,
@@ -235,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F641B631A266C8A000FD22F /* Main_iPhone.storyboard in Resources */,
 				89C4DC871953910900826183 /* Main_iPad.storyboard in Resources */,
 				89C4DC8C1953910900826183 /* Images.xcassets in Resources */,
 				89C4DC7B1953910900826183 /* InfoPlist.strings in Resources */,
@@ -281,6 +285,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		1F641B611A266C8A000FD22F /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F641B621A266C8A000FD22F /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
 		89C4DC791953910900826183 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
