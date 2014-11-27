@@ -20,7 +20,7 @@
     [super viewDidLoad];
     NSURL *url = [NSURL URLWithString:@"http://staging.tagsurf.co/share/trending/0"];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
-    //self.webView.scalesPageToFit = YES;
+    self.webView.scalesPageToFit = YES;
     self.webView.delegate = self;
     [self.webView loadRequest:urlRequest];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -49,8 +49,9 @@
         else {
             NSLog(@"Link click registered");
             [self.linkView loadRequest:request];
+            self.linkView.scalesPageToFit = YES;
             UIButton *closeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-            closeBtn.frame = CGRectMake((self.view.frame.size.width - 50)/2, (self.view.frame.size.height - 50), 50, 30);
+            closeBtn.frame = CGRectMake((self.view.frame.size.width - 50)/2, (self.view.frame.size.height - 30), 50, 30);
             [closeBtn setTitle:@"close" forState:UIControlStateNormal];
             [closeBtn setBackgroundColor:[UIColor lightGrayColor]];
             [closeBtn addTarget:self action:@selector(closeBtn:) forControlEvents:UIControlEventTouchUpInside];
