@@ -2,7 +2,7 @@
 //  ViewController.m
 //  tagSurf
 //
-//  Created by Kieran Farrar on 6/19/14.
+//  Refactored by Paul Lacey on 12/01/14.
 //  Copyright (c) 2014 tagSurfDev. All rights reserved.
 //
 
@@ -41,13 +41,12 @@
         else if(!([requestedURL rangeOfString:@"urx.io" options:NSCaseInsensitiveSearch].location == NSNotFound)) {
             URXSearchResult *result = [URXSearchResult searchResultFromEntityData:@{@"potentialAction":@{@"target":@{@"urlTemplate":requestedURL}}}];
             [result resolveAsynchronouslyWithWebFallbackAndFailureHandler:^(URXAPIError *resolutionError) {
-                // log error if resolution fails
+//                 log error if resolution fails
                 NSLog(@"%@", resolutionError);
             }];
             return NO;
         }
         else {
-            NSLog(@"Link click registered");
             [self.linkView loadRequest:request];
             self.linkView.scalesPageToFit = YES;
             UIButton *closeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
