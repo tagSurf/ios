@@ -1,0 +1,682 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		ACFAC2BF1A0ACC7F00CE872A /* Framework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = ACFAC2C01A0ACC7F00CE872A /* Build configuration list for PBXAggregateTarget "Framework" */;
+			buildPhases = (
+				ACFAC2C51A0ACC9B00CE872A /* Build Framework */,
+			);
+			dependencies = (
+				ACFAC3431A0AD26B00CE872A /* PBXTargetDependency */,
+				ACFAC2C41A0ACC8D00CE872A /* PBXTargetDependency */,
+			);
+			name = Framework;
+			productName = Framework;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		ACE6ACAA1A0D29B600CD51D5 /* URXKeywordContext.h in Headers */ = {isa = PBXBuildFile; fileRef = ACE6ACA81A0D29B600CD51D5 /* URXKeywordContext.h */; };
+		ACE6ACAB1A0D29B600CD51D5 /* URXKeywordContext.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE6ACA91A0D29B600CD51D5 /* URXKeywordContext.m */; };
+		ACFAC2A61A0AC8C200CE872A /* URXWidgets.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ACFAC2A51A0AC8C200CE872A /* URXWidgets.h */; };
+		ACFAC2AE1A0AC8C200CE872A /* libURXWidgets.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACFAC2A21A0AC8C200CE872A /* libURXWidgets.a */; };
+		ACFAC2BD1A0AC9DF00CE872A /* URXWidgets.h in Headers */ = {isa = PBXBuildFile; fileRef = ACFAC2A51A0AC8C200CE872A /* URXWidgets.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACFAC2F31A0ACDC600CE872A /* URXListenButtonSearchViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = ACFAC2EF1A0ACDC600CE872A /* URXListenButtonSearchViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACFAC2F41A0ACDC600CE872A /* URXListenButtonSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFAC2F01A0ACDC600CE872A /* URXListenButtonSearchViewController.m */; };
+		ACFAC2F51A0ACDC600CE872A /* URXListenButtonView.h in Headers */ = {isa = PBXBuildFile; fileRef = ACFAC2F11A0ACDC600CE872A /* URXListenButtonView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACFAC2F61A0ACDC600CE872A /* URXListenButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFAC2F21A0ACDC600CE872A /* URXListenButtonView.m */; };
+		ACFAC2F81A0ACE1300CE872A /* URXSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACFAC2F71A0ACE1300CE872A /* URXSearch.framework */; };
+		ACFAC3411A0AD25700CE872A /* search-result-main-image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFAC3401A0AD25700CE872A /* search-result-main-image@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ACFAC2AF1A0AC8C200CE872A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACFAC29A1A0AC8C200CE872A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACFAC2A11A0AC8C200CE872A;
+			remoteInfo = URXWidgets;
+		};
+		ACFAC2C31A0ACC8D00CE872A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACFAC29A1A0AC8C200CE872A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACFAC2A11A0AC8C200CE872A;
+			remoteInfo = URXWidgets;
+		};
+		ACFAC3421A0AD26B00CE872A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACFAC29A1A0AC8C200CE872A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACFAC3351A0AD15B00CE872A;
+			remoteInfo = URXWidgetsResources;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ACFAC2A01A0AC8C200CE872A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				ACFAC2A61A0AC8C200CE872A /* URXWidgets.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		ACE6ACA81A0D29B600CD51D5 /* URXKeywordContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = URXKeywordContext.h; path = "widgets/keyword-context/URXKeywordContext.h"; sourceTree = "<group>"; };
+		ACE6ACA91A0D29B600CD51D5 /* URXKeywordContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = URXKeywordContext.m; path = "widgets/keyword-context/URXKeywordContext.m"; sourceTree = "<group>"; };
+		ACFAC2A21A0AC8C200CE872A /* libURXWidgets.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libURXWidgets.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACFAC2A51A0AC8C200CE872A /* URXWidgets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URXWidgets.h; sourceTree = "<group>"; };
+		ACFAC2AD1A0AC8C200CE872A /* URXWidgetsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = URXWidgetsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACFAC2B31A0AC8C200CE872A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACFAC2EF1A0ACDC600CE872A /* URXListenButtonSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = URXListenButtonSearchViewController.h; path = "widgets/listen-button/URXListenButtonSearchViewController.h"; sourceTree = "<group>"; };
+		ACFAC2F01A0ACDC600CE872A /* URXListenButtonSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = URXListenButtonSearchViewController.m; path = "widgets/listen-button/URXListenButtonSearchViewController.m"; sourceTree = "<group>"; };
+		ACFAC2F11A0ACDC600CE872A /* URXListenButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = URXListenButtonView.h; path = "widgets/listen-button/URXListenButtonView.h"; sourceTree = "<group>"; };
+		ACFAC2F21A0ACDC600CE872A /* URXListenButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = URXListenButtonView.m; path = "widgets/listen-button/URXListenButtonView.m"; sourceTree = "<group>"; };
+		ACFAC2F71A0ACE1300CE872A /* URXSearch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = URXSearch.framework; sourceTree = "<group>"; };
+		ACFAC3361A0AD15B00CE872A /* URXWidgetsResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = URXWidgetsResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACFAC3391A0AD15B00CE872A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACFAC3401A0AD25700CE872A /* search-result-main-image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "search-result-main-image@2x.png"; path = "URXWidgets/resources/search-result-main-image@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ACFAC29F1A0AC8C200CE872A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACFAC2F81A0ACE1300CE872A /* URXSearch.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACFAC2AA1A0AC8C200CE872A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACFAC2AE1A0AC8C200CE872A /* libURXWidgets.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACFAC3331A0AD15B00CE872A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ACE6AC9D1A0D1A7C00CD51D5 /* Keyword Context */ = {
+			isa = PBXGroup;
+			children = (
+				ACE6ACA81A0D29B600CD51D5 /* URXKeywordContext.h */,
+				ACE6ACA91A0D29B600CD51D5 /* URXKeywordContext.m */,
+			);
+			name = "Keyword Context";
+			sourceTree = "<group>";
+		};
+		ACFAC2991A0AC8C200CE872A = {
+			isa = PBXGroup;
+			children = (
+				ACFAC33F1A0AD23F00CE872A /* Resources */,
+				ACFAC2F71A0ACE1300CE872A /* URXSearch.framework */,
+				ACFAC2A41A0AC8C200CE872A /* URXWidgets */,
+				ACFAC2B11A0AC8C200CE872A /* URXWidgetsTests */,
+				ACFAC3371A0AD15B00CE872A /* URXWidgetsResources */,
+				ACFAC2A31A0AC8C200CE872A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ACFAC2A31A0AC8C200CE872A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ACFAC2A21A0AC8C200CE872A /* libURXWidgets.a */,
+				ACFAC2AD1A0AC8C200CE872A /* URXWidgetsTests.xctest */,
+				ACFAC3361A0AD15B00CE872A /* URXWidgetsResources.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ACFAC2A41A0AC8C200CE872A /* URXWidgets */ = {
+			isa = PBXGroup;
+			children = (
+				ACFAC2A51A0AC8C200CE872A /* URXWidgets.h */,
+				ACFAC2E91A0ACD6900CE872A /* Widgets */,
+			);
+			path = URXWidgets;
+			sourceTree = "<group>";
+		};
+		ACFAC2B11A0AC8C200CE872A /* URXWidgetsTests */ = {
+			isa = PBXGroup;
+			children = (
+				ACFAC2B21A0AC8C200CE872A /* Supporting Files */,
+			);
+			path = URXWidgetsTests;
+			sourceTree = "<group>";
+		};
+		ACFAC2B21A0AC8C200CE872A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ACFAC2B31A0AC8C200CE872A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ACFAC2E91A0ACD6900CE872A /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				ACE6AC9D1A0D1A7C00CD51D5 /* Keyword Context */,
+				ACFAC2EE1A0ACD9200CE872A /* Listen Button */,
+			);
+			name = Widgets;
+			sourceTree = "<group>";
+		};
+		ACFAC2EE1A0ACD9200CE872A /* Listen Button */ = {
+			isa = PBXGroup;
+			children = (
+				ACFAC2EF1A0ACDC600CE872A /* URXListenButtonSearchViewController.h */,
+				ACFAC2F01A0ACDC600CE872A /* URXListenButtonSearchViewController.m */,
+				ACFAC2F11A0ACDC600CE872A /* URXListenButtonView.h */,
+				ACFAC2F21A0ACDC600CE872A /* URXListenButtonView.m */,
+			);
+			name = "Listen Button";
+			sourceTree = "<group>";
+		};
+		ACFAC3371A0AD15B00CE872A /* URXWidgetsResources */ = {
+			isa = PBXGroup;
+			children = (
+				ACFAC3381A0AD15B00CE872A /* Supporting Files */,
+			);
+			path = URXWidgetsResources;
+			sourceTree = "<group>";
+		};
+		ACFAC3381A0AD15B00CE872A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ACFAC3391A0AD15B00CE872A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ACFAC33F1A0AD23F00CE872A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ACFAC3401A0AD25700CE872A /* search-result-main-image@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		ACFAC2BC1A0AC9D200CE872A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACFAC2F31A0ACDC600CE872A /* URXListenButtonSearchViewController.h in Headers */,
+				ACFAC2F51A0ACDC600CE872A /* URXListenButtonView.h in Headers */,
+				ACFAC2BD1A0AC9DF00CE872A /* URXWidgets.h in Headers */,
+				ACE6ACAA1A0D29B600CD51D5 /* URXKeywordContext.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		ACFAC2A11A0AC8C200CE872A /* URXWidgets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACFAC2B61A0AC8C200CE872A /* Build configuration list for PBXNativeTarget "URXWidgets" */;
+			buildPhases = (
+				ACFAC29E1A0AC8C200CE872A /* Sources */,
+				ACFAC29F1A0AC8C200CE872A /* Frameworks */,
+				ACFAC2A01A0AC8C200CE872A /* CopyFiles */,
+				ACFAC2BC1A0AC9D200CE872A /* Headers */,
+				ACFAC2BE1A0ACADD00CE872A /* Prepare Framework */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = URXWidgets;
+			productName = URXWidgets;
+			productReference = ACFAC2A21A0AC8C200CE872A /* libURXWidgets.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		ACFAC2AC1A0AC8C200CE872A /* URXWidgetsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACFAC2B91A0AC8C200CE872A /* Build configuration list for PBXNativeTarget "URXWidgetsTests" */;
+			buildPhases = (
+				ACFAC2A91A0AC8C200CE872A /* Sources */,
+				ACFAC2AA1A0AC8C200CE872A /* Frameworks */,
+				ACFAC2AB1A0AC8C200CE872A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ACFAC2B01A0AC8C200CE872A /* PBXTargetDependency */,
+			);
+			name = URXWidgetsTests;
+			productName = URXWidgetsTests;
+			productReference = ACFAC2AD1A0AC8C200CE872A /* URXWidgetsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ACFAC3351A0AD15B00CE872A /* URXWidgetsResources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACFAC33A1A0AD15B00CE872A /* Build configuration list for PBXNativeTarget "URXWidgetsResources" */;
+			buildPhases = (
+				ACFAC3321A0AD15B00CE872A /* Sources */,
+				ACFAC3331A0AD15B00CE872A /* Frameworks */,
+				ACFAC3341A0AD15B00CE872A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = URXWidgetsResources;
+			productName = URXWidgetsResources;
+			productReference = ACFAC3361A0AD15B00CE872A /* URXWidgetsResources.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ACFAC29A1A0AC8C200CE872A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = URX;
+				TargetAttributes = {
+					ACFAC2A11A0AC8C200CE872A = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					ACFAC2AC1A0AC8C200CE872A = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					ACFAC2BF1A0ACC7F00CE872A = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					ACFAC3351A0AD15B00CE872A = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = ACFAC29D1A0AC8C200CE872A /* Build configuration list for PBXProject "URXWidgets" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ACFAC2991A0AC8C200CE872A;
+			productRefGroup = ACFAC2A31A0AC8C200CE872A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ACFAC2A11A0AC8C200CE872A /* URXWidgets */,
+				ACFAC2AC1A0AC8C200CE872A /* URXWidgetsTests */,
+				ACFAC2BF1A0ACC7F00CE872A /* Framework */,
+				ACFAC3351A0AD15B00CE872A /* URXWidgetsResources */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ACFAC2AB1A0AC8C200CE872A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACFAC3341A0AD15B00CE872A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACFAC3411A0AD25700CE872A /* search-result-main-image@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ACFAC2BE1A0ACADD00CE872A /* Prepare Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Prepare Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"\n\n# Link the \"Current\" version to \"A\"\n/bin/ln -sfh A \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/${PRODUCT_NAME}\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"\n";
+		};
+		ACFAC2C51A0ACC9B00CE872A /* Build Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\nSF_TARGET_NAME=${PROJECT_NAME}\nSF_EXECUTABLE_PATH=\"lib${SF_TARGET_NAME}.a\"\nSF_WRAPPER_NAME=\"${SF_TARGET_NAME}.framework\"\n\n# The following conditionals come from\n# https://github.com/kstenerud/iOS-Universal-Framework\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nSF_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nSF_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SF_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\nSF_OTHER_PLATFORM=iphonesimulator\nelse\nSF_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$SF_SDK_PLATFORM$ ]]\nthen\nSF_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${SF_OTHER_PLATFORM}\"\nelse\necho \"Could not find platform name from build products directory: $BUILT_PRODUCTS_DIR\"\nexit 1\nfi\n\n# Build the other platform.\nxcrun xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${SF_OTHER_PLATFORM}${SF_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" OBJROOT=\"${OBJROOT}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\" $ACTION\n\n# Smash the two static libraries into one fat binary and store it in the .framework\nxcrun lipo -create \"${BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" -output \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n\n# Copy the binary to the other architecture folder to have a complete framework in both.\ncp -a \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ACFAC29E1A0AC8C200CE872A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACFAC2F41A0ACDC600CE872A /* URXListenButtonSearchViewController.m in Sources */,
+				ACFAC2F61A0ACDC600CE872A /* URXListenButtonView.m in Sources */,
+				ACE6ACAB1A0D29B600CD51D5 /* URXKeywordContext.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACFAC2A91A0AC8C200CE872A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACFAC3321A0AD15B00CE872A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ACFAC2B01A0AC8C200CE872A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACFAC2A11A0AC8C200CE872A /* URXWidgets */;
+			targetProxy = ACFAC2AF1A0AC8C200CE872A /* PBXContainerItemProxy */;
+		};
+		ACFAC2C41A0ACC8D00CE872A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACFAC2A11A0AC8C200CE872A /* URXWidgets */;
+			targetProxy = ACFAC2C31A0ACC8D00CE872A /* PBXContainerItemProxy */;
+		};
+		ACFAC3431A0AD26B00CE872A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACFAC3351A0AD15B00CE872A /* URXWidgetsResources */;
+			targetProxy = ACFAC3421A0AD26B00CE872A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		ACFAC2B41A0AC8C200CE872A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+					x86_64,
+					i386,
+				);
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: James Turner (AW2946EVWS)";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				STRIP_STYLE = "non-global";
+			};
+			name = Debug;
+		};
+		ACFAC2B51A0AC8C200CE872A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+					x86_64,
+					i386,
+				);
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: James Turner (AW2946EVWS)";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				STRIP_STYLE = "non-global";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ACFAC2B71A0AC8C200CE872A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+			};
+			name = Debug;
+		};
+		ACFAC2B81A0AC8C200CE872A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+			};
+			name = Release;
+		};
+		ACFAC2BA1A0AC8C200CE872A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = URXWidgetsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ACFAC2BB1A0AC8C200CE872A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = URXWidgetsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		ACFAC2C11A0ACC7F00CE872A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ACFAC2C21A0ACC7F00CE872A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		ACFAC33B1A0AD15B00CE872A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = URXWidgetsResources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		ACFAC33C1A0AD15B00CE872A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				INFOPLIST_FILE = URXWidgetsResources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ACFAC29D1A0AC8C200CE872A /* Build configuration list for PBXProject "URXWidgets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACFAC2B41A0AC8C200CE872A /* Debug */,
+				ACFAC2B51A0AC8C200CE872A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACFAC2B61A0AC8C200CE872A /* Build configuration list for PBXNativeTarget "URXWidgets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACFAC2B71A0AC8C200CE872A /* Debug */,
+				ACFAC2B81A0AC8C200CE872A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACFAC2B91A0AC8C200CE872A /* Build configuration list for PBXNativeTarget "URXWidgetsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACFAC2BA1A0AC8C200CE872A /* Debug */,
+				ACFAC2BB1A0AC8C200CE872A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACFAC2C01A0ACC7F00CE872A /* Build configuration list for PBXAggregateTarget "Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACFAC2C11A0ACC7F00CE872A /* Debug */,
+				ACFAC2C21A0ACC7F00CE872A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACFAC33A1A0AD15B00CE872A /* Build configuration list for PBXNativeTarget "URXWidgetsResources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACFAC33B1A0AD15B00CE872A /* Debug */,
+				ACFAC33C1A0AD15B00CE872A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ACFAC29A1A0AC8C200CE872A /* Project object */;
+}
