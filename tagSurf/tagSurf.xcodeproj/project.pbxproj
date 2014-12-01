@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1F641B631A266C8A000FD22F /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F641B611A266C8A000FD22F /* Main_iPhone.storyboard */; };
-		1FDDD2EC1A1D1AE700EDBAB4 /* URXSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDDD2EB1A1D1AE700EDBAB4 /* URXSearch.framework */; };
+		1F641B7E1A2CED13000FD22F /* URXSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F641B7B1A2CED13000FD22F /* URXSearch.framework */; };
+		1F641B7F1A2CED13000FD22F /* URXWidgets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F641B7C1A2CED13000FD22F /* URXWidgets.framework */; };
+		1F641B801A2CED13000FD22F /* URXWidgetsResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1F641B7D1A2CED13000FD22F /* URXWidgetsResources.bundle */; };
 		89C4DC711953910900826183 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C4DC701953910900826183 /* Foundation.framework */; };
 		89C4DC731953910900826183 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C4DC721953910900826183 /* CoreGraphics.framework */; };
 		89C4DC751953910900826183 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C4DC741953910900826183 /* UIKit.framework */; };
@@ -37,7 +39,9 @@
 
 /* Begin PBXFileReference section */
 		1F641B621A266C8A000FD22F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		1FDDD2EB1A1D1AE700EDBAB4 /* URXSearch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = URXSearch.framework; path = "../urx/urx-sdk-ios/URXSearch.framework"; sourceTree = "<group>"; };
+		1F641B7B1A2CED13000FD22F /* URXSearch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = URXSearch.framework; path = "../urx/urx-widgets-ios-1.1/URXSearch.framework"; sourceTree = "<group>"; };
+		1F641B7C1A2CED13000FD22F /* URXWidgets.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = URXWidgets.framework; path = "../urx/urx-widgets-ios-1.1/URXWidgets.framework"; sourceTree = "<group>"; };
+		1F641B7D1A2CED13000FD22F /* URXWidgetsResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = URXWidgetsResources.bundle; path = "../urx/urx-widgets-ios-1.1/URXWidgetsResources.bundle"; sourceTree = "<group>"; };
 		89C4DC6D1953910900826183 /* tagSurf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tagSurf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89C4DC701953910900826183 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		89C4DC721953910900826183 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -64,7 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FDDD2EC1A1D1AE700EDBAB4 /* URXSearch.framework in Frameworks */,
+				1F641B7F1A2CED13000FD22F /* URXWidgets.framework in Frameworks */,
+				1F641B7E1A2CED13000FD22F /* URXSearch.framework in Frameworks */,
 				89C4DC731953910900826183 /* CoreGraphics.framework in Frameworks */,
 				89C4DC751953910900826183 /* UIKit.framework in Frameworks */,
 				89C4DC711953910900826183 /* Foundation.framework in Frameworks */,
@@ -87,6 +92,9 @@
 		89C4DC641953910900826183 = {
 			isa = PBXGroup;
 			children = (
+				1F641B7B1A2CED13000FD22F /* URXSearch.framework */,
+				1F641B7C1A2CED13000FD22F /* URXWidgets.framework */,
+				1F641B7D1A2CED13000FD22F /* URXWidgetsResources.bundle */,
 				89C4DC761953910900826183 /* tagSurf */,
 				89C4DC981953910900826183 /* tagSurfTests */,
 				89C4DC6F1953910900826183 /* Frameworks */,
@@ -106,7 +114,6 @@
 		89C4DC6F1953910900826183 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1FDDD2EB1A1D1AE700EDBAB4 /* URXSearch.framework */,
 				89C4DC701953910900826183 /* Foundation.framework */,
 				89C4DC721953910900826183 /* CoreGraphics.framework */,
 				89C4DC741953910900826183 /* UIKit.framework */,
@@ -240,6 +247,7 @@
 			files = (
 				1F641B631A266C8A000FD22F /* Main_iPhone.storyboard in Resources */,
 				89C4DC871953910900826183 /* Main_iPad.storyboard in Resources */,
+				1F641B801A2CED13000FD22F /* URXWidgetsResources.bundle in Resources */,
 				89C4DC8C1953910900826183 /* Images.xcassets in Resources */,
 				89C4DC7B1953910900826183 /* InfoPlist.strings in Resources */,
 			);
@@ -402,6 +410,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/placey/Dev/tagsurf_native/ios/urx/urx-sdk-ios",
+					"/Users/placey/Dev/tagsurf_native/ios/urx/urx-widgets-ios-1.1",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tagSurf/tagSurf-Prefix.pch";
@@ -423,6 +432,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/placey/Dev/tagsurf_native/ios/urx/urx-sdk-ios",
+					"/Users/placey/Dev/tagsurf_native/ios/urx/urx-widgets-ios-1.1",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tagSurf/tagSurf-Prefix.pch";
