@@ -17,6 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYG-W1-tbq" userLabel="Link View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qzh-5U-cq6">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -24,13 +28,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="fYG-W1-tbq" firstAttribute="leading" secondItem="qzh-5U-cq6" secondAttribute="leading" id="1Hs-di-LhL"/>
+                            <constraint firstItem="fYG-W1-tbq" firstAttribute="trailing" secondItem="qzh-5U-cq6" secondAttribute="trailing" id="RtC-FT-jHp"/>
                             <constraint firstAttribute="bottom" secondItem="qzh-5U-cq6" secondAttribute="bottom" id="gYb-Dn-6ua"/>
                             <constraint firstAttribute="trailing" secondItem="qzh-5U-cq6" secondAttribute="trailing" id="k07-3N-ceb"/>
                             <constraint firstItem="qzh-5U-cq6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="ooP-Bi-Dqk"/>
                             <constraint firstItem="qzh-5U-cq6" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="uNA-0N-ust"/>
+                            <constraint firstItem="fYG-W1-tbq" firstAttribute="top" secondItem="qzh-5U-cq6" secondAttribute="top" id="x5m-li-wRz"/>
+                            <constraint firstItem="fYG-W1-tbq" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="ymv-ev-gzw"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="linkView" destination="fYG-W1-tbq" id="oa2-m7-2OH"/>
                         <outlet property="webView" destination="qzh-5U-cq6" id="LT8-FW-9Xh"/>
                     </connections>
                 </viewController>

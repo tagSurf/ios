@@ -2,7 +2,7 @@
 //  AppDelegate.h
 //  tagSurf
 //
-//  Created by Kieran Farrar on 6/19/14.
+//  Refactored by Paul Lacey on 12/01/14.
 //  Copyright (c) 2014 tagSurfDev. All rights reserved.
 //
 
