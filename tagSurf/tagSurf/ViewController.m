@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import <URXSearch/URXSearchResult.h>
+#import "UAPush.h"
+
 @interface ViewController ()
     
 @end
@@ -18,7 +20,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSURL *url = [NSURL URLWithString:@"http://beta.tagsurf.co/share/trending/0"];
+    NSURL *url = [NSURL URLWithString:@"http://192.168.1.224:3000/share/trending/0"];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     self.webView.scalesPageToFit = YES;
     self.webView.delegate = self;
@@ -35,9 +37,20 @@
 #pragma mark - UIWebViewDelegate
  -(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
-    if(navigationType == 0) {
+    if(navigationType == UIWebViewNavigationTypeLinkClicked) {
         NSString *requestedURL = request.URL.absoluteString;
-        if(!([requestedURL rangeOfString:@"tagsurf" options:NSCaseInsensitiveSearch].location == NSNotFound)) return YES;
+        NSLog(@"%@", requestedURL);
+        if(!([requestedURL rangeOfString:@"192.168" options:NSCaseInsensitiveSearch].location == NSNotFound)) {
+            if(!([requestedURL rangeOfString:@"push-enable" options:NSCaseInsensitiveSearch].location == NSNotFound)) {
+                NSString *user_id = [[requestedURL componentsSeparatedByString:@"/"] objectAtIndex:4];
+                [UAPush shared].alias = user_id;
+                [[UAPush shared] updateRegistration];
+                [UAPush shared].userPushNotificationsEnabled = YES;
+                return YES;
+            }
+            else
+                return YES;
+        }
         else if(!([requestedURL rangeOfString:@"urx.io" options:NSCaseInsensitiveSearch].location == NSNotFound)) {
             URXSearchResult *result = [URXSearchResult searchResultFromEntityData:@{@"potentialAction":@{@"target":@{@"urlTemplate":requestedURL}}}];
             [result resolveAsynchronouslyWithWebFallbackAndFailureHandler:^(URXAPIError *resolutionError) {
