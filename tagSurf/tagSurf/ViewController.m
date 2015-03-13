@@ -20,7 +20,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSURL *url = [NSURL URLWithString:@"http://192.168.1.224:3000/share/trending/0"];
+    NSURL *url = [NSURL URLWithString:@"http://beta.tagsurf.co/share/trending/0"];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     self.webView.scalesPageToFit = YES;
     self.webView.delegate = self;
@@ -40,7 +40,7 @@
     if(navigationType == UIWebViewNavigationTypeLinkClicked) {
         NSString *requestedURL = request.URL.absoluteString;
         NSLog(@"%@", requestedURL);
-        if(!([requestedURL rangeOfString:@"192.168" options:NSCaseInsensitiveSearch].location == NSNotFound)) {
+        if(!([requestedURL rangeOfString:@"tagsurf" options:NSCaseInsensitiveSearch].location == NSNotFound)) {
             if(!([requestedURL rangeOfString:@"push-enable" options:NSCaseInsensitiveSearch].location == NSNotFound)) {
                 NSString *user_id = [[requestedURL componentsSeparatedByString:@"/"] objectAtIndex:4];
                 [UAPush shared].alias = user_id;
