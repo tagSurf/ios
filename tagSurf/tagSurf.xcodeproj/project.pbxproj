@@ -21,6 +21,8 @@
 		1F7E5E7F1AAE62E300DD0281 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7E5E7E1AAE62E300DD0281 /* CoreLocation.framework */; };
 		1F7E5E811AAE630C00DD0281 /* libUAirship-5.1.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7E5E801AAE630C00DD0281 /* libUAirship-5.1.1.a */; };
 		1F7E5E831AAE646300DD0281 /* AirshipConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F7E5E821AAE646300DD0281 /* AirshipConfig.plist */; };
+		1FC3B1C71AB9012900CF3C3E /* AGPushNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC3B1C51AB9012900CF3C3E /* AGPushNoteView.m */; };
+		1FC3B1C81AB9012900CF3C3E /* AGPushNoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FC3B1C61AB9012900CF3C3E /* AGPushNoteView.xib */; };
 		89C4DC711953910900826183 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C4DC701953910900826183 /* Foundation.framework */; };
 		89C4DC731953910900826183 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C4DC721953910900826183 /* CoreGraphics.framework */; };
 		89C4DC751953910900826183 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C4DC741953910900826183 /* UIKit.framework */; };
@@ -62,6 +64,9 @@
 		1F7E5E7E1AAE62E300DD0281 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1F7E5E801AAE630C00DD0281 /* libUAirship-5.1.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libUAirship-5.1.1.a"; path = "tagSurf/libUAirship-latest/Airship/libUAirship-5.1.1.a"; sourceTree = "<group>"; };
 		1F7E5E821AAE646300DD0281 /* AirshipConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AirshipConfig.plist; sourceTree = "<group>"; };
+		1FC3B1C41AB9012900CF3C3E /* AGPushNoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGPushNoteView.h; path = ../AGPushNote/AGPushNote/AGPushNoteView.h; sourceTree = "<group>"; };
+		1FC3B1C51AB9012900CF3C3E /* AGPushNoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGPushNoteView.m; path = ../AGPushNote/AGPushNote/AGPushNoteView.m; sourceTree = "<group>"; };
+		1FC3B1C61AB9012900CF3C3E /* AGPushNoteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AGPushNoteView.xib; path = ../AGPushNote/AGPushNote/AGPushNoteView.xib; sourceTree = "<group>"; };
 		89C4DC6D1953910900826183 /* tagSurf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tagSurf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89C4DC701953910900826183 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		89C4DC721953910900826183 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -121,6 +126,9 @@
 		89C4DC641953910900826183 = {
 			isa = PBXGroup;
 			children = (
+				1FC3B1C41AB9012900CF3C3E /* AGPushNoteView.h */,
+				1FC3B1C51AB9012900CF3C3E /* AGPushNoteView.m */,
+				1FC3B1C61AB9012900CF3C3E /* AGPushNoteView.xib */,
 				1F641B7B1A2CED13000FD22F /* URXSearch.framework */,
 				1F641B7C1A2CED13000FD22F /* URXWidgets.framework */,
 				1F641B7D1A2CED13000FD22F /* URXWidgetsResources.bundle */,
@@ -289,6 +297,7 @@
 				1F641B801A2CED13000FD22F /* URXWidgetsResources.bundle in Resources */,
 				1F7E5E831AAE646300DD0281 /* AirshipConfig.plist in Resources */,
 				89C4DC8C1953910900826183 /* Images.xcassets in Resources */,
+				1FC3B1C81AB9012900CF3C3E /* AGPushNoteView.xib in Resources */,
 				89C4DC7B1953910900826183 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FC3B1C71AB9012900CF3C3E /* AGPushNoteView.m in Sources */,
 				89C4DC8A1953910900826183 /* ViewController.m in Sources */,
 				89C4DC811953910900826183 /* AppDelegate.m in Sources */,
 				89C4DC7D1953910900826183 /* main.m in Sources */,

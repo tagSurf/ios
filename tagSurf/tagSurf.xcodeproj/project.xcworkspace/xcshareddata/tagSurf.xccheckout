@@ -14,6 +14,8 @@
 		<string>https://github.com/URXtech/urx-sdk-ios.git</string>
 		<key>60DFD16DE28FEB6BC3303A859A71F51F67821AFD</key>
 		<string>github.com:tagSurf/ios.git</string>
+		<key>781572FBDDD7C924BD8F4605FE96D360D8F18313</key>
+		<string>https://github.com/avielg/AGPushNote.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>tagSurf/tagSurf.xcodeproj</string>
@@ -23,6 +25,8 @@
 		<string>../../../urx/urx-sdk-ios</string>
 		<key>60DFD16DE28FEB6BC3303A859A71F51F67821AFD</key>
 		<string>../../..</string>
+		<key>781572FBDDD7C924BD8F4605FE96D360D8F18313</key>
+		<string>../../../AGPushNote/</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:tagSurf/ios.git</string>
@@ -32,6 +36,14 @@
 	<string>60DFD16DE28FEB6BC3303A859A71F51F67821AFD</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>781572FBDDD7C924BD8F4605FE96D360D8F18313</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AGPushNote</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
