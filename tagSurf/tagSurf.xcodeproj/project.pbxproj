@@ -11,6 +11,18 @@
 		1F641B7E1A2CED13000FD22F /* URXSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F641B7B1A2CED13000FD22F /* URXSearch.framework */; };
 		1F641B7F1A2CED13000FD22F /* URXWidgets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F641B7C1A2CED13000FD22F /* URXWidgets.framework */; };
 		1F641B801A2CED13000FD22F /* URXWidgetsResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1F641B7D1A2CED13000FD22F /* URXWidgetsResources.bundle */; };
+		1F7E5E711AAE628800DD0281 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7E5E701AAE628800DD0281 /* CFNetwork.framework */; };
+		1F7E5E731AAE629700DD0281 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7E5E721AAE629700DD0281 /* MobileCoreServices.framework */; };
+		1F7E5E751AAE62A000DD0281 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7E5E741AAE62A000DD0281 /* Security.framework */; };
+		1F7E5E771AAE62AB00DD0281 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7E5E761AAE62AB00DD0281 /* SystemConfiguration.framework */; };
+		1F7E5E791AAE62C000DD0281 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7E5E781AAE62C000DD0281 /* libz.dylib */; };
+		1F7E5E7B1AAE62CF00DD0281 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7E5E7A1AAE62CF00DD0281 /* libsqlite3.dylib */; };
+		1F7E5E7D1AAE62DB00DD0281 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7E5E7C1AAE62DB00DD0281 /* CoreTelephony.framework */; };
+		1F7E5E7F1AAE62E300DD0281 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7E5E7E1AAE62E300DD0281 /* CoreLocation.framework */; };
+		1F7E5E811AAE630C00DD0281 /* libUAirship-5.1.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7E5E801AAE630C00DD0281 /* libUAirship-5.1.1.a */; };
+		1F7E5E831AAE646300DD0281 /* AirshipConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F7E5E821AAE646300DD0281 /* AirshipConfig.plist */; };
+		1FC3B1C71AB9012900CF3C3E /* AGPushNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC3B1C51AB9012900CF3C3E /* AGPushNoteView.m */; };
+		1FC3B1C81AB9012900CF3C3E /* AGPushNoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FC3B1C61AB9012900CF3C3E /* AGPushNoteView.xib */; };
 		89C4DC711953910900826183 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C4DC701953910900826183 /* Foundation.framework */; };
 		89C4DC731953910900826183 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C4DC721953910900826183 /* CoreGraphics.framework */; };
 		89C4DC751953910900826183 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C4DC741953910900826183 /* UIKit.framework */; };
@@ -42,6 +54,19 @@
 		1F641B7B1A2CED13000FD22F /* URXSearch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = URXSearch.framework; path = "../urx/urx-widgets-ios-1.1/URXSearch.framework"; sourceTree = "<group>"; };
 		1F641B7C1A2CED13000FD22F /* URXWidgets.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = URXWidgets.framework; path = "../urx/urx-widgets-ios-1.1/URXWidgets.framework"; sourceTree = "<group>"; };
 		1F641B7D1A2CED13000FD22F /* URXWidgetsResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = URXWidgetsResources.bundle; path = "../urx/urx-widgets-ios-1.1/URXWidgetsResources.bundle"; sourceTree = "<group>"; };
+		1F7E5E701AAE628800DD0281 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		1F7E5E721AAE629700DD0281 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		1F7E5E741AAE62A000DD0281 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		1F7E5E761AAE62AB00DD0281 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1F7E5E781AAE62C000DD0281 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		1F7E5E7A1AAE62CF00DD0281 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		1F7E5E7C1AAE62DB00DD0281 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		1F7E5E7E1AAE62E300DD0281 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1F7E5E801AAE630C00DD0281 /* libUAirship-5.1.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libUAirship-5.1.1.a"; path = "tagSurf/libUAirship-latest/Airship/libUAirship-5.1.1.a"; sourceTree = "<group>"; };
+		1F7E5E821AAE646300DD0281 /* AirshipConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AirshipConfig.plist; sourceTree = "<group>"; };
+		1FC3B1C41AB9012900CF3C3E /* AGPushNoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGPushNoteView.h; path = ../AGPushNote/AGPushNote/AGPushNoteView.h; sourceTree = "<group>"; };
+		1FC3B1C51AB9012900CF3C3E /* AGPushNoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGPushNoteView.m; path = ../AGPushNote/AGPushNote/AGPushNoteView.m; sourceTree = "<group>"; };
+		1FC3B1C61AB9012900CF3C3E /* AGPushNoteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AGPushNoteView.xib; path = ../AGPushNote/AGPushNote/AGPushNoteView.xib; sourceTree = "<group>"; };
 		89C4DC6D1953910900826183 /* tagSurf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tagSurf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89C4DC701953910900826183 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		89C4DC721953910900826183 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -68,10 +93,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F7E5E811AAE630C00DD0281 /* libUAirship-5.1.1.a in Frameworks */,
+				1F7E5E7F1AAE62E300DD0281 /* CoreLocation.framework in Frameworks */,
+				1F7E5E7D1AAE62DB00DD0281 /* CoreTelephony.framework in Frameworks */,
+				1F7E5E7B1AAE62CF00DD0281 /* libsqlite3.dylib in Frameworks */,
+				1F7E5E791AAE62C000DD0281 /* libz.dylib in Frameworks */,
+				89C4DC751953910900826183 /* UIKit.framework in Frameworks */,
+				1F7E5E771AAE62AB00DD0281 /* SystemConfiguration.framework in Frameworks */,
+				1F7E5E751AAE62A000DD0281 /* Security.framework in Frameworks */,
+				1F7E5E731AAE629700DD0281 /* MobileCoreServices.framework in Frameworks */,
+				1F7E5E711AAE628800DD0281 /* CFNetwork.framework in Frameworks */,
 				1F641B7F1A2CED13000FD22F /* URXWidgets.framework in Frameworks */,
 				1F641B7E1A2CED13000FD22F /* URXSearch.framework in Frameworks */,
 				89C4DC731953910900826183 /* CoreGraphics.framework in Frameworks */,
-				89C4DC751953910900826183 /* UIKit.framework in Frameworks */,
 				89C4DC711953910900826183 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +126,9 @@
 		89C4DC641953910900826183 = {
 			isa = PBXGroup;
 			children = (
+				1FC3B1C41AB9012900CF3C3E /* AGPushNoteView.h */,
+				1FC3B1C51AB9012900CF3C3E /* AGPushNoteView.m */,
+				1FC3B1C61AB9012900CF3C3E /* AGPushNoteView.xib */,
 				1F641B7B1A2CED13000FD22F /* URXSearch.framework */,
 				1F641B7C1A2CED13000FD22F /* URXWidgets.framework */,
 				1F641B7D1A2CED13000FD22F /* URXWidgetsResources.bundle */,
@@ -114,6 +151,15 @@
 		89C4DC6F1953910900826183 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1F7E5E801AAE630C00DD0281 /* libUAirship-5.1.1.a */,
+				1F7E5E7E1AAE62E300DD0281 /* CoreLocation.framework */,
+				1F7E5E7C1AAE62DB00DD0281 /* CoreTelephony.framework */,
+				1F7E5E7A1AAE62CF00DD0281 /* libsqlite3.dylib */,
+				1F7E5E781AAE62C000DD0281 /* libz.dylib */,
+				1F7E5E761AAE62AB00DD0281 /* SystemConfiguration.framework */,
+				1F7E5E741AAE62A000DD0281 /* Security.framework */,
+				1F7E5E721AAE629700DD0281 /* MobileCoreServices.framework */,
+				1F7E5E701AAE628800DD0281 /* CFNetwork.framework */,
 				89C4DC701953910900826183 /* Foundation.framework */,
 				89C4DC721953910900826183 /* CoreGraphics.framework */,
 				89C4DC741953910900826183 /* UIKit.framework */,
@@ -144,6 +190,7 @@
 				89C4DC791953910900826183 /* InfoPlist.strings */,
 				89C4DC7C1953910900826183 /* main.m */,
 				89C4DC7E1953910900826183 /* tagSurf-Prefix.pch */,
+				1F7E5E821AAE646300DD0281 /* AirshipConfig.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -248,7 +295,9 @@
 				1F641B631A266C8A000FD22F /* Main_iPhone.storyboard in Resources */,
 				89C4DC871953910900826183 /* Main_iPad.storyboard in Resources */,
 				1F641B801A2CED13000FD22F /* URXWidgetsResources.bundle in Resources */,
+				1F7E5E831AAE646300DD0281 /* AirshipConfig.plist in Resources */,
 				89C4DC8C1953910900826183 /* Images.xcassets in Resources */,
+				1FC3B1C81AB9012900CF3C3E /* AGPushNoteView.xib in Resources */,
 				89C4DC7B1953910900826183 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FC3B1C71AB9012900CF3C3E /* AGPushNoteView.m in Sources */,
 				89C4DC8A1953910900826183 /* ViewController.m in Sources */,
 				89C4DC811953910900826183 /* AppDelegate.m in Sources */,
 				89C4DC7D1953910900826183 /* main.m in Sources */,
@@ -414,7 +464,14 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tagSurf/tagSurf-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/Users/placey/Dev/tagsurf_native/ios/tagsurf/tagsurf/libUAirship-latest/Airship/**",
+				);
 				INFOPLIST_FILE = "tagSurf/tagSurf-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = "/Users/placey/Dev/tagsurf_native/ios/tagSurf/tagSurf/libUAirship-latest/Airship/**";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -436,7 +493,14 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tagSurf/tagSurf-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/Users/placey/Dev/tagsurf_native/ios/tagsurf/tagsurf/libUAirship-latest/Airship/**",
+				);
 				INFOPLIST_FILE = "tagSurf/tagSurf-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = "/Users/placey/Dev/tagsurf_native/ios/tagSurf/tagSurf/libUAirship-latest/Airship/**";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
