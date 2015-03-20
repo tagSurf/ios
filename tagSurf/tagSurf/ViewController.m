@@ -32,7 +32,7 @@ machineName()
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSURL *url = [NSURL URLWithString:@"http://192.168.1.224:3000/share/trending/0"];
+    NSURL *url = [NSURL URLWithString:@"http://beta.tagsurf.co/share/funny/0"];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     self.webView.scalesPageToFit = YES;
     self.webView.delegate = self;
@@ -53,7 +53,7 @@ machineName()
 
 
     if(navigationType == 0 || (navigationType == 5 && !([requestedURL rangeOfString:@"push" options:NSCaseInsensitiveSearch|NSRegularExpressionSearch].location == NSNotFound))) {
-        if(!([requestedURL rangeOfString:@"192" options:NSCaseInsensitiveSearch].location == NSNotFound)) {
+        if(!([requestedURL rangeOfString:@"tagsurf" options:NSCaseInsensitiveSearch].location == NSNotFound)) {
             if(!([requestedURL rangeOfString:@"push-enable" options:NSCaseInsensitiveSearch|NSRegularExpressionSearch].location == NSNotFound)) {
                 
                 NSString *user_id = [[requestedURL componentsSeparatedByString:@"/"] objectAtIndex:4];
