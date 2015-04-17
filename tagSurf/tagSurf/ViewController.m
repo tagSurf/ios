@@ -42,7 +42,7 @@ machineName()
         
     }];
     
-    NSURL *url = [NSURL URLWithString:@"http://staging.tagsurf.co/share/funny/0"];
+    NSURL *url = [NSURL URLWithString:@"http://beta.tagsurf.co/share/funny/0"];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     self.webView.scalesPageToFit = YES;
     self.webView.delegate = self;
@@ -111,7 +111,6 @@ machineName()
         }
     }
     else if(!([requestedURL rangeOfString:@"auth" options:NSCaseInsensitiveSearch].location == NSNotFound) && !([requestedURL rangeOfString:@"facebook" options:NSCaseInsensitiveSearch].location == NSNotFound)) {
-        NSLog(@"URL Request: %@", requestedURL);
 
         FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
         [login logInWithReadPermissions:@[@"email",@"public_profile",@"user_friends"] handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
@@ -148,7 +147,7 @@ machineName()
                                  
                                  NSMutableURLRequest *postRequest = [[NSMutableURLRequest alloc] init];
                                  
-                                 [postRequest setURL:[NSURL URLWithString:@"http://staging.tagsurf.co/authentication/from-native"]];
+                                 [postRequest setURL:[NSURL URLWithString:@"http://beta.tagsurf.co/authentication/from-native"]];
                                  [postRequest setHTTPMethod:@"POST"];
                                  [postRequest setValue:postLength forHTTPHeaderField:@"Content-Length"];
                                  [postRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
@@ -156,7 +155,6 @@ machineName()
                                  
                                  [self.webView loadRequest:postRequest];
                                  
-//                                 NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:postRequest delegate:self];
                              }
                          }];
                         
