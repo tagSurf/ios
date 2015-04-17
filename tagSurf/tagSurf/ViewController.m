@@ -143,7 +143,7 @@ machineName()
                                  
                                  NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
                                  
-                                 NSString *postLength = [NSString stringWithFormat:@"%lu",[postData length]];
+                                 NSString *postLength = [NSString stringWithFormat:@"%d",[postData length]];
                                  
                                  NSMutableURLRequest *postRequest = [[NSMutableURLRequest alloc] init];
                                  
