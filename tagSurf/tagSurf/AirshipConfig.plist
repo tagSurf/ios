@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>inProduction</key>
-	<false/>
+	<true/>
 	<key>productionAppKey</key>
 	<string>xAP0Hge-StGbQvVSzyOa6Q</string>
 	<key>productionAppSecret</key>
