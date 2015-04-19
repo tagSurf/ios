@@ -65,7 +65,7 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
+	<true/>
 	<key>URX API Key</key>
 	<string>b1aSpMnJ/3O34aMfEJA1vNz3YxdYjV/IFkGmBklg3dPCUzzEmm6ljTfj/DI=|lnycFsQzlChVDnzyQQqBY/wwPstOrMq5</string>
 </dict>

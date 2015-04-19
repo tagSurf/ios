@@ -35,6 +35,8 @@ machineName()
 {
     [super viewDidLoad];
     
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    
     [FBSDKProfile enableUpdatesOnAccessTokenChange:YES];
     
     [[NSNotificationCenter defaultCenter] addObserverForName:FBSDKProfileDidChangeNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
@@ -99,7 +101,7 @@ machineName()
             [self.linkView loadRequest:request];
             self.linkView.scalesPageToFit = YES;
             UIButton *closeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-            closeBtn.frame = CGRectMake((self.view.frame.size.width - 55)/2, (self.view.frame.size.height - 32), 55, 32);
+            closeBtn.frame = CGRectMake((self.view.frame.size.width - 55)/2, (self.view.frame.size.height - 52), 55, 32);
             [closeBtn setTitle:@"close" forState:UIControlStateNormal];
             [closeBtn setBackgroundColor:[UIColor lightGrayColor]];
             [closeBtn addTarget:self action:@selector(closeBtn:) forControlEvents:UIControlEventTouchUpInside];
