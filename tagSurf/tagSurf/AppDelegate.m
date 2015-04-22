@@ -12,6 +12,8 @@
 #import "UAPush.h"
 #import "AGPushNoteView.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <Bolts/BFURL.h>
+#import "ViewController.h"
 
 
 @implementation AppDelegate
@@ -19,6 +21,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
     
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     
@@ -28,6 +31,9 @@
     
     [UAPush shared].userNotificationTypes = (UIUserNotificationTypeAlert |
                                              UIUserNotificationTypeBadge);
+    
+//    self.viewController = [[ViewController alloc] init];
+//    self.window.rootViewController = self.viewController;
     
     return [[FBSDKApplicationDelegate sharedInstance] application:application
                                     didFinishLaunchingWithOptions:launchOptions];
@@ -83,11 +89,29 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    BFURL *parsedUrl = [BFURL URLWithInboundURL:url sourceApplication:sourceApplication];
+    ViewController *view = (ViewController *)[[[UIApplication sharedApplication] keyWindow] rootViewController];
+    if ([[parsedUrl targetQueryParameters] objectForKey:@"target_url"]) {
+        // this is an applink url, handle it here
+        NSString *targetUrl = [[parsedUrl targetQueryParameters] objectForKey:@"target_url"];
+        self.targetUrl = targetUrl;
+        [view loadURL:targetUrl];
+    }
+    else if ([[url host] isEqualToString:@"card"]) {
+        NSString *tag = [[[[url path] componentsSeparatedByString:@"~"] objectAtIndex:0] stringByReplacingOccurrencesOfString:@"/" withString:@""];
+        NSString *cardID = [[[url path] componentsSeparatedByString:@"~"] objectAtIndex:1];
+        NSLog(@"tag %@", tag);
+        [view loadCard:tag cardID:cardID];
+    }
+    
     return [[FBSDKApplicationDelegate sharedInstance] application:application
-                                                          openURL:url
-                                                sourceApplication:sourceApplication
-                                                       annotation:annotation];
+                                                              openURL:url
+                                                    sourceApplication:sourceApplication
+                                                           annotation:annotation];
 }
 
 @end

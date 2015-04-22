@@ -15,4 +15,8 @@
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UIWebView *linkView;
 
-@end
+- (void)loadURL:(NSString *)urlToLoad;
+
+- (void)loadCard:(NSString *)tag cardID:(NSString *)cardID;
+
+@end;

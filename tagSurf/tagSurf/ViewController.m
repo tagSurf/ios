@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <URXSearch/URXSearchResult.h>
 #import "UAPush.h"
+#import "AppDelegate.h"
 #import <sys/utsname.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
@@ -44,7 +45,16 @@ machineName()
         
     }];
     
-    NSURL *url = [NSURL URLWithString:@"http://beta.tagsurf.co/share/funny/0"];
+    NSURL *url;
+    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    if (delegate.targetUrl) {
+      url = [NSURL URLWithString:delegate.targetUrl];
+    }
+    else {
+      url = [NSURL URLWithString:@"http://beta.tagsurf.co/share/funny/0"];
+    }
+    delegate.targetUrl = nil;
+    
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     self.webView.scalesPageToFit = YES;
     self.webView.delegate = self;
@@ -56,6 +66,32 @@ machineName()
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    if (delegate.targetUrl) {
+        NSURL *url = [NSURL URLWithString:delegate.targetUrl];
+        NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+        [self.webView loadRequest:urlRequest];
+    }
+    delegate.targetUrl = nil;
+    
+}
+
+- (void)loadURL:(NSString *)urlToLoad {
+    NSURL *url = [NSURL URLWithString:urlToLoad];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+    [self.webView loadRequest:urlRequest];
+}
+
+- (void)loadCard:(NSString *)tag cardID:(NSString *)cardID {
+    NSArray *urlComponents = [[NSArray alloc] initWithObjects:@"http://beta.tagsurf.co/share", tag, cardID, nil];
+    NSString *urlString = [urlComponents componentsJoinedByString:@"/"];
+    NSURL *url = [NSURL URLWithString:urlString];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+    [self.webView loadRequest:urlRequest];
 }
 
 #pragma mark - UIWebViewDelegate

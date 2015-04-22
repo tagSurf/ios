@@ -13,6 +13,7 @@
 		1F641B7E1A2CED13000FD22F /* URXSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F641B7B1A2CED13000FD22F /* URXSearch.framework */; };
 		1F641B7F1A2CED13000FD22F /* URXWidgets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F641B7C1A2CED13000FD22F /* URXWidgets.framework */; };
 		1F641B801A2CED13000FD22F /* URXWidgetsResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1F641B7D1A2CED13000FD22F /* URXWidgetsResources.bundle */; };
+		1F7A16471AE78FFA003B859A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7A16461AE78FFA003B859A /* Bolts.framework */; };
 		1F7E5E711AAE628800DD0281 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7E5E701AAE628800DD0281 /* CFNetwork.framework */; };
 		1F7E5E731AAE629700DD0281 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7E5E721AAE629700DD0281 /* MobileCoreServices.framework */; };
 		1F7E5E751AAE62A000DD0281 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7E5E741AAE62A000DD0281 /* Security.framework */; };
@@ -58,6 +59,7 @@
 		1F641B7B1A2CED13000FD22F /* URXSearch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = URXSearch.framework; path = "../urx/urx-widgets-ios-1.1/URXSearch.framework"; sourceTree = "<group>"; };
 		1F641B7C1A2CED13000FD22F /* URXWidgets.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = URXWidgets.framework; path = "../urx/urx-widgets-ios-1.1/URXWidgets.framework"; sourceTree = "<group>"; };
 		1F641B7D1A2CED13000FD22F /* URXWidgetsResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = URXWidgetsResources.bundle; path = "../urx/urx-widgets-ios-1.1/URXWidgetsResources.bundle"; sourceTree = "<group>"; };
+		1F7A16461AE78FFA003B859A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = FacebookSDK/Bolts.framework; sourceTree = "<group>"; };
 		1F7E5E701AAE628800DD0281 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		1F7E5E721AAE629700DD0281 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		1F7E5E741AAE62A000DD0281 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -109,6 +111,7 @@
 				1F7E5E711AAE628800DD0281 /* CFNetwork.framework in Frameworks */,
 				1F270C1F1AE090550053ECAA /* FBSDKCoreKit.framework in Frameworks */,
 				1F641B7F1A2CED13000FD22F /* URXWidgets.framework in Frameworks */,
+				1F7A16471AE78FFA003B859A /* Bolts.framework in Frameworks */,
 				1F641B7E1A2CED13000FD22F /* URXSearch.framework in Frameworks */,
 				89C4DC731953910900826183 /* CoreGraphics.framework in Frameworks */,
 				1F270C211AE0950F0053ECAA /* FBSDKLoginKit.framework in Frameworks */,
@@ -157,6 +160,7 @@
 		89C4DC6F1953910900826183 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1F7A16461AE78FFA003B859A /* Bolts.framework */,
 				1F270C201AE0950F0053ECAA /* FBSDKLoginKit.framework */,
 				1F270C1E1AE090550053ECAA /* FBSDKCoreKit.framework */,
 				1F7E5E801AAE630C00DD0281 /* libUAirship-5.1.1.a */,
