@@ -51,7 +51,7 @@ machineName()
       url = [NSURL URLWithString:delegate.targetUrl];
     }
     else {
-      url = [NSURL URLWithString:@"http://staging.tagsurf.co/share/funny/0"];
+      url = [NSURL URLWithString:@"http://beta.tagsurf.co/share/funny/0"];
     }
     delegate.targetUrl = nil;
     
