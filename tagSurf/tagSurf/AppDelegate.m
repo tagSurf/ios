@@ -104,7 +104,6 @@
     else if ([[url host] isEqualToString:@"card"]) {
         NSString *tag = [[[[url path] componentsSeparatedByString:@"~"] objectAtIndex:0] stringByReplacingOccurrencesOfString:@"/" withString:@""];
         NSString *cardID = [[[url path] componentsSeparatedByString:@"~"] objectAtIndex:1];
-        NSLog(@"tag %@", tag);
         [view loadCard:tag cardID:cardID];
     }
     

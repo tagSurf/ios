@@ -51,7 +51,7 @@ machineName()
       url = [NSURL URLWithString:delegate.targetUrl];
     }
     else {
-      url = [NSURL URLWithString:@"http://beta.tagsurf.co/share/funny/0"];
+      url = [NSURL URLWithString:@"http://staging.tagsurf.co/share/funny/0"];
     }
     delegate.targetUrl = nil;
     
@@ -101,7 +101,34 @@ machineName()
 
 
     if(navigationType == 0 || (navigationType == 5 && !([requestedURL rangeOfString:@"push" options:NSCaseInsensitiveSearch|NSRegularExpressionSearch].location == NSNotFound))) {
-        if(!([requestedURL rangeOfString:@"tagsurf" options:NSCaseInsensitiveSearch].location == NSNotFound)) {
+        if(!([requestedURL rangeOfString:@"nativeShare" options:NSCaseInsensitiveSearch].location == NSNotFound)) {
+            
+            NSString *shareLink = [[requestedURL componentsSeparatedByString:@"//"] objectAtIndex:2];
+            NSString *tag = [[shareLink componentsSeparatedByString:@"/"] objectAtIndex:2];
+            
+            NSString *message1 = @"OMG this is so #";
+            NSString *message = [message1 stringByAppendingString:tag];
+            NSURL *link = [NSURL URLWithString:[@"http://" stringByAppendingString:shareLink]];
+            
+            NSArray *objectsToShare = @[message, link];
+            
+            UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
+            
+            NSArray *excludeActivities = @[UIActivityTypeAirDrop,
+                                           UIActivityTypePrint,
+                                           UIActivityTypeAssignToContact,
+                                           UIActivityTypeSaveToCameraRoll,
+                                           UIActivityTypeAddToReadingList,
+                                           UIActivityTypePostToFlickr,
+                                           UIActivityTypePostToVimeo];
+            
+            activityVC.excludedActivityTypes = excludeActivities;
+            
+            [self presentViewController:activityVC animated:YES completion:nil];
+            
+            return NO;
+        }
+        else if(!([requestedURL rangeOfString:@"tagsurf" options:NSCaseInsensitiveSearch].location == NSNotFound)) {
             if(!([requestedURL rangeOfString:@"push-enable" options:NSCaseInsensitiveSearch|NSRegularExpressionSearch].location == NSNotFound)) {
                 
                 NSString *user_id = [[requestedURL componentsSeparatedByString:@"/"] objectAtIndex:4];
