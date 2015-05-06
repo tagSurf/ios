@@ -52,7 +52,7 @@ machineName()
       url = [NSURL URLWithString:delegate.targetUrl];
     }
     else {
-      url = [NSURL URLWithString:@"http://192.168.1.224:3000/share/funny/0"];
+      url = [NSURL URLWithString:@"http://beta.tagsurf.co/share/funny/0"];
     }
     delegate.targetUrl = nil;
     
@@ -208,7 +208,7 @@ machineName()
                          NSString *jsonString = [[NSString alloc] initWithData:jsonData
                                                                       encoding:NSUTF8StringEncoding];
                          NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[jsonString length]];
-                         NSURL *url = [NSURL URLWithString:@"http://192.168.1.224:3000/api/contacts"];
+                         NSURL *url = [NSURL URLWithString:@"http://beta.tagsurf.co/api/contacts"];
                          NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
                          [urlRequest setHTTPMethod:@"POST"];
                          [urlRequest setValue:postLength forHTTPHeaderField:@"Content-Length"];
