@@ -131,6 +131,9 @@ machineName()
         else if(!([requestedURL rangeOfString:@"sms:" options:NSCaseInsensitiveSearch].location == NSNotFound)) {
             return YES;
         }
+        else if(!([requestedURL rangeOfString:@"mailto:" options:NSCaseInsensitiveSearch].location == NSNotFound)) {
+            return YES;
+        }
         else if(!([requestedURL rangeOfString:@"addressbook" options:NSCaseInsensitiveSearch].location == NSNotFound)) {
             
             CFErrorRef myError = NULL;
@@ -173,7 +176,14 @@ machineName()
                                  {
                                     phoneNumber = (__bridge NSString*) ABMultiValueCopyValueAtIndex(phoneNumbers, i);
                                     break;
+                                 } else if ([phoneLabel isEqualToString:(NSString *)kABPersonPhoneIPhoneLabel]) {
+                                    phoneNumber = (__bridge NSString*) ABMultiValueCopyValueAtIndex(phoneNumbers, i);
+                                    break;
+                                 } else if ([phoneLabel isEqualToString:(NSString *)kABPersonPhoneMainLabel]) {
+                                     phoneNumber = (__bridge NSString*) ABMultiValueCopyValueAtIndex(phoneNumbers, i);
+                                     break;
                                  }
+                                     
                              }
                              
                              NSMutableString *scrubbedNumber = [[[phoneNumber componentsSeparatedByCharactersInSet:
@@ -193,7 +203,9 @@ machineName()
                              [contact setObject:(__bridge NSArray*)emails forKey:@"emails"];
                              CFRelease(emails);
                          }
-                         
+                         if (![contact objectForKey:@"phone_number"] && ![contact objectForKey:@"emails"]) {
+                             continue;
+                         }
                          [contactList addObject:contact];
                          
                      }
