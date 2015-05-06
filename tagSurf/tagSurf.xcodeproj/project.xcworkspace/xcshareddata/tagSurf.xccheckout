@@ -22,7 +22,7 @@
 		<key>60DFD16DE28FEB6BC3303A859A71F51F67821AFD</key>
 		<string>../../..</string>
 		<key>781572FBDDD7C924BD8F4605FE96D360D8F18313</key>
-		<string>../../..AGPushNote/</string>
+		<string>../../..AGPushNote</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:tagSurf/ios.git</string>
@@ -36,17 +36,17 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>781572FBDDD7C924BD8F4605FE96D360D8F18313</string>
+			<string>60DFD16DE28FEB6BC3303A859A71F51F67821AFD</string>
 			<key>IDESourceControlWCCName</key>
-			<string>AGPushNote</string>
+			<string>ios</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>60DFD16DE28FEB6BC3303A859A71F51F67821AFD</string>
+			<string>781572FBDDD7C924BD8F4605FE96D360D8F18313</string>
 			<key>IDESourceControlWCCName</key>
-			<string>ios</string>
+			<string>iosAGPushNote</string>
 		</dict>
 	</array>
 </dict>
