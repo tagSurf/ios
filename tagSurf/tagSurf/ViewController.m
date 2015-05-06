@@ -13,6 +13,7 @@
 #import <sys/utsname.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <AddressBook/AddressBook.h>
 
 @interface ViewController ()
     
@@ -102,10 +103,9 @@ machineName()
 
     if(navigationType == 0 || (navigationType == 5 && !([requestedURL rangeOfString:@"push" options:NSCaseInsensitiveSearch|NSRegularExpressionSearch].location == NSNotFound))) {
         if(!([requestedURL rangeOfString:@"nativeShare" options:NSCaseInsensitiveSearch].location == NSNotFound)) {
-            
+    
             NSString *shareLink = [[requestedURL componentsSeparatedByString:@"//"] objectAtIndex:2];
             NSString *tag = [[shareLink componentsSeparatedByString:@"/"] objectAtIndex:2];
-            
             NSString *message1 = @"OMG this is so #";
             NSString *message = [message1 stringByAppendingString:tag];
             NSURL *link = [NSURL URLWithString:[@"http://" stringByAppendingString:shareLink]];
@@ -126,6 +126,104 @@ machineName()
             
             [self presentViewController:activityVC animated:YES completion:nil];
             
+            return NO;
+        }
+        else if(!([requestedURL rangeOfString:@"sms:" options:NSCaseInsensitiveSearch].location == NSNotFound)) {
+            return YES;
+        }
+        else if(!([requestedURL rangeOfString:@"addressbook" options:NSCaseInsensitiveSearch].location == NSNotFound)) {
+            
+            CFErrorRef myError = NULL;
+            ABAddressBookRef myAddressBook = ABAddressBookCreateWithOptions(NULL, &myError);
+            ABAddressBookRequestAccessWithCompletion(myAddressBook,
+             ^(bool granted, CFErrorRef error) {
+                 if (granted) {
+                     NSArray *allContacts = (NSArray *)CFBridgingRelease(ABAddressBookCopyArrayOfAllPeople(myAddressBook));
+                     
+                     NSMutableArray *contactList = [[NSMutableArray alloc] init];
+                     
+                     for (id rec in allContacts) {
+                         
+                         ABRecordRef *person = (__bridge ABRecordRef) rec;
+                         NSMutableDictionary *contact = [[NSMutableDictionary alloc]
+                                                         initWithObjects:@[@"", @"", @"", @""]
+                                                                 forKeys:@[@"first_name",@"last_name", @"phone_number", @"emails"]];
+                        
+                         CFTypeRef firstName = ABRecordCopyValue(person,kABPersonFirstNameProperty);
+                         CFTypeRef lastName = ABRecordCopyValue(person,kABPersonLastNameProperty);
+                         ABMultiValueRef phoneNumbers = ABRecordCopyValue(person,kABPersonPhoneProperty);
+                         CFTypeRef emails = ABMultiValueCopyArrayOfAllValues(ABRecordCopyValue(person,kABPersonEmailProperty));
+                         NSString *phoneNumber;
+                         
+                         if (!phoneNumbers && !emails) {
+                             continue;
+                         }
+                         if (firstName) {
+                             [contact setObject:(__bridge NSString*)firstName forKey:@"first_name"];
+                             CFRelease(firstName);
+                         }
+                         if (lastName) {
+                             [contact setObject:(__bridge NSString*)lastName forKey:@"last_name"];
+                             CFRelease(lastName);
+                         }
+                         if (phoneNumbers) {
+                             for (int i=0; i < ABMultiValueGetCount(phoneNumbers); i++) {
+                                 NSString* phoneLabel = (__bridge NSString*) ABMultiValueCopyLabelAtIndex(phoneNumbers, i);
+                                 if([phoneLabel isEqualToString:(NSString *)kABPersonPhoneMobileLabel])
+                                 {
+                                    phoneNumber = (__bridge NSString*) ABMultiValueCopyValueAtIndex(phoneNumbers, i);
+                                    break;
+                                 }
+                             }
+                             
+                             NSMutableString *scrubbedNumber = [[[phoneNumber componentsSeparatedByCharactersInSet:
+                                                        [[NSCharacterSet decimalDigitCharacterSet] invertedSet]]
+                                                       componentsJoinedByString:@""] mutableCopy];
+                             if ([scrubbedNumber length] == 10) {
+                                 scrubbedNumber = [[@"+1" stringByAppendingString:scrubbedNumber] mutableCopy];
+                                 [contact setObject:scrubbedNumber forKey:@"phone_number"];
+                             } else if (scrubbedNumber) {
+                                 scrubbedNumber = [[@"+" stringByAppendingString:scrubbedNumber] mutableCopy];
+                                 [contact setObject:scrubbedNumber forKey:@"phone_number"];
+                             }
+
+                             CFRelease(phoneNumbers);
+                         }
+                         if (emails) {
+                             [contact setObject:(__bridge NSArray*)emails forKey:@"emails"];
+                             CFRelease(emails);
+                         }
+                         
+                         [contactList addObject:contact];
+                         
+                     }
+                     
+                     NSError *error;
+                     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:contactList
+                                                                        options:NSJSONWritingPrettyPrinted
+                                                                          error:&error];
+                     if (! jsonData) {
+                         NSLog(@"JSON Encode Error: %@", error);
+                     } else {
+                         NSString *jsonString = [[NSString alloc] initWithData:jsonData
+                                                                      encoding:NSUTF8StringEncoding];
+                         NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[jsonString length]];
+                         NSURL *url = [NSURL URLWithString:@"http://beta.tagsurf.co/api/contacts"];
+                         NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
+                         [urlRequest setHTTPMethod:@"POST"];
+                         [urlRequest setValue:postLength forHTTPHeaderField:@"Content-Length"];
+                         [urlRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+                         [urlRequest setHTTPBody:jsonData];
+                         [self.webView loadRequest:urlRequest];
+                     }
+
+                 } else {
+                     // Handle the case of being denied access and/or the error.
+                 }
+                 CFRelease(myAddressBook);
+             });
+            
+            [self.webView stopLoading];
             return NO;
         }
         else if(!([requestedURL rangeOfString:@"tagsurf" options:NSCaseInsensitiveSearch].location == NSNotFound)) {
