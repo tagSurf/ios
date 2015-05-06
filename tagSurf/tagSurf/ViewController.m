@@ -103,10 +103,9 @@ machineName()
 
     if(navigationType == 0 || (navigationType == 5 && !([requestedURL rangeOfString:@"push" options:NSCaseInsensitiveSearch|NSRegularExpressionSearch].location == NSNotFound))) {
         if(!([requestedURL rangeOfString:@"nativeShare" options:NSCaseInsensitiveSearch].location == NSNotFound)) {
-            
+    
             NSString *shareLink = [[requestedURL componentsSeparatedByString:@"//"] objectAtIndex:2];
             NSString *tag = [[shareLink componentsSeparatedByString:@"/"] objectAtIndex:2];
-            
             NSString *message1 = @"OMG this is so #";
             NSString *message = [message1 stringByAppendingString:tag];
             NSURL *link = [NSURL URLWithString:[@"http://" stringByAppendingString:shareLink]];
@@ -129,6 +128,9 @@ machineName()
             
             return NO;
         }
+        else if(!([requestedURL rangeOfString:@"sms:" options:NSCaseInsensitiveSearch].location == NSNotFound)) {
+            return YES;
+        }
         else if(!([requestedURL rangeOfString:@"addressbook" options:NSCaseInsensitiveSearch].location == NSNotFound)) {
             
             CFErrorRef myError = NULL;
@@ -136,7 +138,7 @@ machineName()
             ABAddressBookRequestAccessWithCompletion(myAddressBook,
              ^(bool granted, CFErrorRef error) {
                  if (granted) {
-                     NSArray *allContacts = (NSArray *)CFBridgingReleasemerge(ABAddressBookCopyArrayOfAllPeople(myAddressBook));
+                     NSArray *allContacts = (NSArray *)CFBridgingRelease(ABAddressBookCopyArrayOfAllPeople(myAddressBook));
                      
                      NSMutableArray *contactList = [[NSMutableArray alloc] init];
                      
@@ -145,12 +147,13 @@ machineName()
                          ABRecordRef *person = (__bridge ABRecordRef) rec;
                          NSMutableDictionary *contact = [[NSMutableDictionary alloc]
                                                          initWithObjects:@[@"", @"", @"", @""]
-                                                                 forKeys:@[@"first_name",@"last_name", @"phone_numbers", @"emails"]];
+                                                                 forKeys:@[@"first_name",@"last_name", @"phone_number", @"emails"]];
                         
                          CFTypeRef firstName = ABRecordCopyValue(person,kABPersonFirstNameProperty);
                          CFTypeRef lastName = ABRecordCopyValue(person,kABPersonLastNameProperty);
-                         CFTypeRef phoneNumbers = ABMultiValueCopyArrayOfAllValues(ABRecordCopyValue(person,kABPersonPhoneProperty));
+                         ABMultiValueRef phoneNumbers = ABRecordCopyValue(person,kABPersonPhoneProperty);
                          CFTypeRef emails = ABMultiValueCopyArrayOfAllValues(ABRecordCopyValue(person,kABPersonEmailProperty));
+                         NSString *phoneNumber;
                          
                          if (!phoneNumbers && !emails) {
                              continue;
@@ -164,20 +167,26 @@ machineName()
                              CFRelease(lastName);
                          }
                          if (phoneNumbers) {
-                             NSMutableArray *scrubbedNumbers = [(__bridge NSMutableArray*)phoneNumbers mutableCopy];
-                             for (int i=0; i < [scrubbedNumbers count]; ++i) {
-                                 NSString *cleanNumber = [[scrubbedNumbers[i] componentsSeparatedByCharactersInSet:
-                                                        [[NSCharacterSet decimalDigitCharacterSet] invertedSet]]
-                                                       componentsJoinedByString:@""];
-                                 if ([cleanNumber length] == 10) {
-                                     cleanNumber = [@"+1" stringByAppendingString:cleanNumber];
-                                 } else {
-                                     cleanNumber = [@"+" stringByAppendingString:cleanNumber];
+                             for (int i=0; i < ABMultiValueGetCount(phoneNumbers); i++) {
+                                 NSString* phoneLabel = (__bridge NSString*) ABMultiValueCopyLabelAtIndex(phoneNumbers, i);
+                                 if([phoneLabel isEqualToString:(NSString *)kABPersonPhoneMobileLabel])
+                                 {
+                                    phoneNumber = (__bridge NSString*) ABMultiValueCopyValueAtIndex(phoneNumbers, i);
+                                    break;
                                  }
-                                 
-                                 [scrubbedNumbers setObject:cleanNumber atIndexedSubscript:i];
                              }
-                             [contact setObject:scrubbedNumbers forKey:@"phone_numbers"];
+                             
+                             NSMutableString *scrubbedNumber = [[[phoneNumber componentsSeparatedByCharactersInSet:
+                                                        [[NSCharacterSet decimalDigitCharacterSet] invertedSet]]
+                                                       componentsJoinedByString:@""] mutableCopy];
+                             if ([scrubbedNumber length] == 10) {
+                                 scrubbedNumber = [[@"+1" stringByAppendingString:scrubbedNumber] mutableCopy];
+                                 [contact setObject:scrubbedNumber forKey:@"phone_number"];
+                             } else if (scrubbedNumber) {
+                                 scrubbedNumber = [[@"+" stringByAppendingString:scrubbedNumber] mutableCopy];
+                                 [contact setObject:scrubbedNumber forKey:@"phone_number"];
+                             }
+
                              CFRelease(phoneNumbers);
                          }
                          if (emails) {
