@@ -56,6 +56,9 @@ machineName()
     }
     delegate.targetUrl = nil;
     
+    [self.webView setKeyboardDisplayRequiresUserAction:NO];
+    [self.linkView setKeyboardDisplayRequiresUserAction:NO];
+    
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     self.webView.scalesPageToFit = YES;
     self.webView.delegate = self;
