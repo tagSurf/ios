@@ -14,8 +14,9 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <AddressBook/AddressBook.h>
+#import <MessageUI/MessageUI.h>
 
-@interface ViewController ()
+@interface ViewController ()  <MFMessageComposeViewControllerDelegate, MFMailComposeViewControllerDelegate>
     
 @end
 
@@ -103,7 +104,6 @@ machineName()
 {
     NSString *requestedURL = request.URL.absoluteString;
 
-
     if(navigationType == 0 || (navigationType == 5 && !([requestedURL rangeOfString:@"push" options:NSCaseInsensitiveSearch|NSRegularExpressionSearch].location == NSNotFound))) {
         if(!([requestedURL rangeOfString:@"nativeShare" options:NSCaseInsensitiveSearch].location == NSNotFound)) {
     
@@ -132,10 +132,53 @@ machineName()
             return NO;
         }
         else if(!([requestedURL rangeOfString:@"sms:" options:NSCaseInsensitiveSearch].location == NSNotFound)) {
-            return YES;
+            if(![MFMessageComposeViewController canSendText]) {
+                UIAlertView *warningAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Your device doesn't support SMS!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [warningAlert show];
+                return NO;
+            }
+            
+            NSString *params = [[requestedURL componentsSeparatedByString:@"sms:"] objectAtIndex:1];
+            
+            NSArray *recipient = [NSArray arrayWithObject:[[params componentsSeparatedByString:@"&"] objectAtIndex:0]];
+            NSString *encodedMessage = [[params componentsSeparatedByString:@"&body="] objectAtIndex:1];
+            NSString *decodedMessage = [encodedMessage stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+            NSString *message = [[decodedMessage componentsSeparatedByString:@"https://"] objectAtIndex:0];
+            NSString *path = [[decodedMessage componentsSeparatedByString:@"https://"] objectAtIndex:1];
+            NSString *url = [@"\n\nhttps://" stringByAppendingString:path];
+            message = [message stringByAppendingString:url];
+            
+            MFMessageComposeViewController *messageController = [[MFMessageComposeViewController alloc] init];
+            messageController.messageComposeDelegate = self;
+            [messageController setRecipients:recipient];
+            [messageController setBody:message];
+            
+            // Present message view controller on screen
+            [self presentViewController:messageController animated:YES completion:nil];
+            
+            return NO;
         }
         else if(!([requestedURL rangeOfString:@"mailto:" options:NSCaseInsensitiveSearch].location == NSNotFound)) {
-            return YES;
+            NSString *params = [[requestedURL componentsSeparatedByString:@"mailto:"] objectAtIndex:1];
+            
+            NSArray *toRecipient = [NSArray arrayWithObject:[[params componentsSeparatedByString:@"?"] objectAtIndex:0]];
+            NSString *emailTitle = [[[[params componentsSeparatedByString:@"subject="] objectAtIndex:1] componentsSeparatedByString:@"&"] objectAtIndex:0];
+            NSString *encodedMessage = [[params componentsSeparatedByString:@"&body="] objectAtIndex:1];
+            NSString *decodedMessage = [encodedMessage stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+            NSString *messageBody = [[decodedMessage componentsSeparatedByString:@"https://"] objectAtIndex:0];
+            NSString *path = [[decodedMessage componentsSeparatedByString:@"https://"] objectAtIndex:1];
+            NSString *url = [@"\n\nhttps://" stringByAppendingString:path];
+            messageBody = [messageBody stringByAppendingString:url];
+            
+            MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+            mc.mailComposeDelegate = self;
+            [mc setSubject:emailTitle];
+            [mc setMessageBody:messageBody isHTML:NO];
+            [mc setToRecipients:toRecipient];
+            
+            [self presentViewController:mc animated:YES completion:NULL];
+            
+            return NO;
         }
         else if(!([requestedURL rangeOfString:@"addressbook" options:NSCaseInsensitiveSearch].location == NSNotFound)) {
             
@@ -350,6 +393,53 @@ machineName()
     [self.linkView stringByEvaluatingJavaScriptFromString:@"document.body.innerHTML = \"\";"];
     [self.view bringSubviewToFront:self.webView];
     
+}
+
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult) result
+{
+    switch (result) {
+        case MessageComposeResultCancelled:
+            break;
+            
+        case MessageComposeResultFailed:
+        {
+            UIAlertView *warningAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Failed to send SMS!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [warningAlert show];
+            break;
+        }
+            
+        case MessageComposeResultSent:
+            break;
+            
+        default:
+            break;
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            NSLog(@"Mail cancelled");
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"Mail saved");
+            break;
+        case MFMailComposeResultSent:
+            NSLog(@"Mail sent");
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Mail sent failure: %@", [error localizedDescription]);
+            break;
+        default:
+            break;
+    }
+    
+    // Close the Mail Interface
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 @end
 
