@@ -53,7 +53,7 @@ machineName()
       url = [NSURL URLWithString:delegate.targetUrl];
     }
     else {
-      url = [NSURL URLWithString:@"http://beta.tagsurf.co/share/funny/0"];
+      url = [NSURL URLWithString:@"http://192.168.1.224:3000/share/funny/0"];
     }
     delegate.targetUrl = nil;
     
@@ -92,7 +92,7 @@ machineName()
 }
 
 - (void)loadCard:(NSString *)tag cardID:(NSString *)cardID {
-    NSArray *urlComponents = [[NSArray alloc] initWithObjects:@"http://beta.tagsurf.co/share", tag, cardID, nil];
+    NSArray *urlComponents = [[NSArray alloc] initWithObjects:@"http://192.168.1.224:3000/share", tag, cardID, nil];
     NSString *urlString = [urlComponents componentsJoinedByString:@"/"];
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
@@ -266,7 +266,7 @@ machineName()
                          NSString *jsonString = [[NSString alloc] initWithData:jsonData
                                                                       encoding:NSUTF8StringEncoding];
                          NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[jsonString length]];
-                         NSURL *url = [NSURL URLWithString:@"http://beta.tagsurf.co/api/contacts"];
+                         NSURL *url = [NSURL URLWithString:@"http://192.168.1.224:3000/api/contacts"];
                          NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
                          [urlRequest setHTTPMethod:@"POST"];
                          [urlRequest setValue:postLength forHTTPHeaderField:@"Content-Length"];
@@ -284,7 +284,7 @@ machineName()
             [self.webView stopLoading];
             return NO;
         }
-        else if(!([requestedURL rangeOfString:@"tagsurf" options:NSCaseInsensitiveSearch].location == NSNotFound)) {
+        else if(!([requestedURL rangeOfString:@"192.168" options:NSCaseInsensitiveSearch].location == NSNotFound)) {
             if(!([requestedURL rangeOfString:@"push-enable" options:NSCaseInsensitiveSearch|NSRegularExpressionSearch].location == NSNotFound)) {
                 
                 NSString *user_id = [[requestedURL componentsSeparatedByString:@"/"] objectAtIndex:4];
@@ -368,7 +368,7 @@ machineName()
                                  
                                  NSMutableURLRequest *postRequest = [[NSMutableURLRequest alloc] init];
                                  
-                                 [postRequest setURL:[NSURL URLWithString:@"http://beta.tagsurf.co/authentication/from-native"]];
+                                 [postRequest setURL:[NSURL URLWithString:@"http://192.168.1.224:3000/authentication/from-native"]];
                                  [postRequest setHTTPMethod:@"POST"];
                                  [postRequest setValue:postLength forHTTPHeaderField:@"Content-Length"];
                                  [postRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
