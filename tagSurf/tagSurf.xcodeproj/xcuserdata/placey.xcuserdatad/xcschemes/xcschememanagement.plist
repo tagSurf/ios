@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>tagSurf-cal.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>tagSurf.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>89C4DC901953910900826183</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9df50ed111dc1e964f10be98</key>
 		<dict>
 			<key>primary</key>
 			<true/>
