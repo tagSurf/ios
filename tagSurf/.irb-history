@@ -1,0 +1,50 @@
+query("UIWebview")
+query("webView")
+qstr = "webView css:'user_email#user[email]'"
+query(qstr)
+query("webView css:'input#user_email'")
+qsrt = "webView css:'input#user_email'"
+touch(qsrt)
+keyboard_enter_text("Paul@tagsurf.co")
+exit
+start_test_server_in_background
+qsrt = "webView css:'input#user_email'"
+touch(qsrt)
+keyboard_enter_text("Paul@tagsurf.co")
+keyboard_enter_text("Delete")
+keyboard_enter_text(Delete)
+keyboard_enter_text("surfdemo@tagsurf.co")
+qstr = "webView css:'input#user_password'"
+touch(qstr)
+keyboard_enter_text("swiperight")
+  qstr = "webView css:'input#ts-login-btn'"  
+touch(qstr)
+  qstr = "webView css:'div#nav'"  
+screen = query(qstr)
+screen.any?
+screen = query("wer")
+screen.any?
+exit
+start_test_server_in_background
+query("view")
+query("UIWebView")
+query("UIWebView css:"input#new_user")
+query("webView css:"input#new_user")
+query("webView css:'input#new_user'")
+start_test_server_in_background
+query("webView css:'input#new_user'")
+query("UIWebView css:'input#new_user'")
+query("UIWebView css:'input#new-user'")
+query("UIWebView css:'form#new_user'")
+exit
+start_test_server_in_background
+query(
+start_test_server_in_background
+query("webView css:'div#nav'")
+query("webView css:'div#na'")
+query("webView css:'div#nav'")
+query("webView css:'input#ts-login-btn'")
+query("webView css:'input#ts-login-btn'")
+touch("webView css:'input#ts-login-btn'")
+q
+exit
