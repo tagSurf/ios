@@ -42,7 +42,7 @@
 	<key>CFBundleVersion</key>
 	<string>1.7</string>
 	<key>FacebookAppID</key>
-	<string>676135635790285</string>
+	<string></string>
 	<key>FacebookDisplayName</key>
 	<string>tagSurf</string>
 	<key>LSApplicationCategoryType</key>
@@ -75,6 +75,6 @@
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
 	<key>URX API Key</key>
-	<string>b1aSpMnJ/3O34aMfEJA1vNz3YxdYjV/IFkGmBklg3dPCUzzEmm6ljTfj/DI=|lnycFsQzlChVDnzyQQqBY/wwPstOrMq5</string>
+	<string></string>
 </dict>
 </plist>
